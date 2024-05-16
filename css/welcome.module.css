@@ -1,25 +1,21 @@
 .Hero{
-    height: 85%;
+    height: 85vh;
     width: 100%;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-
+    position: relative;
     overflow: hidden;
 }
 
-.textContainer{
-    height: 100%;
+.textOverlayContainer{
+    height: 35%;
     width: 100%;
 
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
 
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 
     color: white;
 
@@ -33,11 +29,7 @@
     flex-direction: column;
     align-items: flex-start;
 
-    margin-top: 35%;
-    margin-bottom: 10%;
-    margin-left: 10%;
-    
-    font-size: 1.6rem;
+    margin-left: 5%;
 }
 
 button.menuItem{
@@ -63,8 +55,6 @@ button.menuItem:nth-child(1){
     flex-direction: column;
     align-items: flex-start;
 
-    margin-top: 35%;
-    margin-bottom: 10%;
 }
 
 .title{

@@ -1,12 +1,24 @@
 .mainContainer{
-    height: 5000px;
     width: 100vw;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     overflow: hidden;
 
     background-color: rgb(25, 25, 25)
+}
+
+.subtitle{
+    padding: 50px 0 0 10%;
+
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+
+@keyframes fade-in{
+    from {}
+    to {}
 }
