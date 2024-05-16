@@ -33,7 +33,7 @@
     flex-direction: column;
     align-items: flex-start;
 
-    margin-top: 25%;
+    margin-top: 35%;
     margin-bottom: 10%;
     margin-left: 10%;
     
@@ -41,8 +41,8 @@
 }
 
 button.menuItem{
-    padding: 8px 12px;
-    margin: 5px;
+    padding: 5px 12px;
+    margin: 2px;
     background: none;
     border: none;
     color: white;
@@ -57,19 +57,24 @@ button.menuItem:nth-child(1){
 }
 
 .textRight{
-
     flex: 3;
 
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
-    margin: 5%;
+    margin-top: 35%;
+    margin-bottom: 10%;
 }
 
 .title{
-    font-size: 5rem;
+    font-size: 4rem;
+    font-weight: 750;
 }
 
 .description{
-    font-size: 3rem;
+    max-width: 500px;
+    font-weight: 600;
+
+    color: rgb(150, 150, 150);
 }
