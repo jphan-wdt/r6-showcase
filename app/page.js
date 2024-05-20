@@ -1,6 +1,7 @@
-import styles from "./page.module.css";
+import page from "./page.module.css";
 import Welcome from "@/components/Welcome";
 import Explore from "@/components/Explore";
+import Trailer from "@/components/Trailer";
 import Basics from "@/components/Basics";
 import Team from "@/components/Team";
 import Gadgets from "@/components/Gadgets";
@@ -10,20 +11,32 @@ import Travel from "@/components/Travel";
 
 export default function Home() {
   return (
-    <main className={styles.mainContainer}>
+    
+    <main className={page.mainContainer}>
+      {/* <div className={page.scrollwatcher}/> */}
       <Welcome/>
-      <div className={styles.subtitle}>Explore</div>
+
+      {/* <div className={page.subtitle}>Explore</div> */}
       <Explore/>
-      <div className={styles.subtitle}>Learn the Basics</div>
+
+      <Trailer/>
+
+      <div className={page.subtitle}>Learn the Basics</div>
       <Basics/>
-      <div className={styles.subtitle}>Meet Team Rainbow</div>
-      <Team/>
-      <div className={styles.subtitle}>Mastery Gadgetry</div>
-      <Gadgets/>
-      <div className={styles.subtitle}>Embrace Destruction</div>
-      <Destruction/>
-      <div className={styles.subtitle}>Travel the World</div>
+
+      <div className={page.subtitle}>Travel the World</div>
       <Travel/>
+
+      <div className={page.subtitle}>Meet Team Rainbow</div>
+      <Team/>
+
+      <div className={page.subtitle}>Master Gadgetry</div>
+      <Gadgets/>
+
+      <div className={page.subtitle}>Embrace Destruction</div>
+      <Destruction/>
+
+
     </main>
   );
 }

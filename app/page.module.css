@@ -1,5 +1,6 @@
 .mainContainer{
     width: 100vw;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -18,7 +19,20 @@
     color: white;
 }
 
-@keyframes fade-in{
-    from {}
-    to {}
+.scrollwatcher{
+    height: 10px;
+    position: fixed;
+    top: 0;
+    background-color: lime;
+    width: 100%;
+    transform-origin: left;
+    z-index: 100;
+
+    scale: 0 1;
+    animation: scrollwatch linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scrollwatch {
+    to { scale: 1 1; }
 }
