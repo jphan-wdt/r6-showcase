@@ -7,7 +7,7 @@
 }
 
 .textOverlayContainer{
-    height: 35%;
+    height: 40%;
     width: 100%;
 
     position: absolute;
@@ -30,6 +30,7 @@
     align-items: flex-start;
 
     margin-left: 5%;
+    padding: 10px;
 }
 
 button.menuItem{
@@ -48,13 +49,12 @@ button.menuItem:nth-child(1){
     border-radius: 25px;
 }
 
-.textRight{
+.rightCol{
     flex: 3;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
 }
 
 .title{
@@ -67,4 +67,25 @@ button.menuItem:nth-child(1){
     font-weight: 600;
 
     color: rgb(150, 150, 150);
+}
+
+.ctaContainer{
+    width: 50%;
+
+    display: flex;
+}
+
+.ctaButton{
+    margin-top: 15px;
+    margin-right: 15px;
+    padding: 10px;
+
+    border: solid 3px white;
+
+    cursor: pointer;
+}
+
+.ctaButton:hover{
+    background-color: white;
+    color: black;
 }

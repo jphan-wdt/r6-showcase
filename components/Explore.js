@@ -1,5 +1,6 @@
 
 import explore from "../css/explore.module.css"
+import section from "../css/section.module.css"
 
 export default function Explore() {
     return(

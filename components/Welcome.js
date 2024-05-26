@@ -13,16 +13,20 @@ export default function Welcome() {
                 <button className={welcome.menuItem}>Embrace Destruction</button>
                 <button className={welcome.menuItem}>Travel the World</button>
             </div>
-            <div className={welcome.textRight}>
+            <div className={welcome.rightCol}>
                 <div className={welcome.title}>Strategic Perfection</div>
                 <br/>
-                <br/>
                 <div className={welcome.description}>
-                    Prepare, strategise, execute. Face the most
+                    Plan, prepare, execute. Face the most
                     formidable opponents in the world of Rainbow Six
                 </div>
 
-                <div>Learn More + </div>
+                <div className={welcome.ctaContainer}>
+                    <div className={welcome.ctaButton}>Learn More + </div>
+                    <div className={welcome.ctaButton}>Buy Now </div>
+                </div>
+
+                
             </div>
         </div>
 

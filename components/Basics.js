@@ -1,14 +1,15 @@
 import section from "../css/section.module.css"
-import Image from 'next/image'
-import picture from "../public/Basics.jpg"
+import VideoPlayer from "./VideoPlayer";
+import Image from "next/image"
+
 
 export default function Basics() {
     return(
-        <div className={section.cardContainer}>
+        <div className={section.sectionContainer}>
             <div className={section.caption}>
                 Engage in intense close-quarter combat.
                 Every move matters, every second counts.
-                Master the fundamentals and lead your team to victory.
+                Master the fundamentals and play your part in victory.
             </div>
         </div>
     );

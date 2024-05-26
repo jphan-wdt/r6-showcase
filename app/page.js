@@ -8,7 +8,6 @@ import Gadgets from "@/components/Gadgets";
 import Destruction from "@/components/Destruction";
 import Travel from "@/components/Travel";
 
-
 export default function Home() {
   return (
     
@@ -16,24 +15,25 @@ export default function Home() {
       {/* <div className={page.scrollwatcher}/> */}
       <Welcome/>
 
-      {/* <div className={page.subtitle}>Explore</div> */}
+      <div className={page.subHeader}>Explore</div>
+      <div className={page.caption}>What's new</div>
       <Explore/>
 
       <Trailer/>
 
-      <div className={page.subtitle}>Learn the Basics</div>
+      <div className={page.subHeader}>Learn the Basics</div>
       <Basics/>
 
-      <div className={page.subtitle}>Travel the World</div>
+      <div className={page.subHeader}>Travel the World</div>
       <Travel/>
 
-      <div className={page.subtitle}>Meet Team Rainbow</div>
+      <div className={page.subHeader}>Meet Team Rainbow</div>
       <Team/>
 
-      <div className={page.subtitle}>Master Gadgetry</div>
+      <div className={page.subHeader}>Master Gadgetry</div>
       <Gadgets/>
 
-      <div className={page.subtitle}>Embrace Destruction</div>
+      <div className={page.subHeader}>Embrace Destruction</div>
       <Destruction/>
 
 

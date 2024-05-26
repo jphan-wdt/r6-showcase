@@ -26,14 +26,14 @@ export default function Trailer(){
             </div>
 
             <iframe
-                src="https://www.youtube.com/embed/QxkQY-8pAhk?si=1VhvVmidvE5JnJs8"
+                src="https://www.youtube.com/embed/RPY3TQSolm4?si=AfNnePVL95ZvncDB"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen>
             </iframe>
-
+            {/* src="https://www.youtube.com/embed/QxkQY-8pAhk?si=1VhvVmidvE5JnJs8" */}
         </div>
     );
 }
