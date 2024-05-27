@@ -1,20 +1,28 @@
+'use client'
+
 import section from "../css/section.module.css"
 import team from "../css/team.module.css"
 import Image from "next/image";
 
-import bank from "../public/maps-bank.webp"
-import border from "../public/maps-border.webp"
-import chalet from "../public/maps-chalet.webp"
-import coastline from "../public/maps-coastline.webp"
-import favela from "../public/maps-favela.webp"
+import ash from "../public/profile-ash.webp"
+import mira from "../public/profile-mira.webp"
+import thatcher from "../public/profile-thatcher.webp"
+import twitch from "../public/profile-twitch.webp"
+
 
 export default function Team() {
+
+    function handleClick() {
+        
+    }
+
+
     return(
-        <div className={section.cardContainer}>
+        <div className={section.sectionContainer}>
 
             <div className={section.caption}>
                 Meet the 71 playable operators from all hailing from one of
-                the 32 CTUs in the game
+                the 32 CTUs in the game.
             </div>
 
             <div className={team.flexContainer}>
@@ -22,10 +30,12 @@ export default function Team() {
                 <div className={team.flexCard}>
                     <Image
                         className={team.flexBackground}
-                        src={bank}
+                        src={ash}
                     />
+                    <div className={team.gradientOverlay} />
                     <div className={team.textOverlay}>
-                        <div className={team.mainText}></div>
+                        <div>Ash</div>
+                        <div className={team.overlayBtn} onClick={handleClick}/>
                     </div>
 
                 </div>
@@ -33,10 +43,12 @@ export default function Team() {
                 <div className={team.flexCard}>
                     <Image
                         className={team.flexBackground}
-                        src={bank}
+                        src={mira}
                     />
+                    <div className={team.gradientOverlay} />
                     <div className={team.textOverlay}>
-                        <div className={team.mainText}></div>
+                        <div>Mira</div>
+                        <div className={team.overlayBtn}/>
                     </div>
 
                 </div>
@@ -44,10 +56,12 @@ export default function Team() {
                 <div className={team.flexCard}>
                     <Image
                         className={team.flexBackground}
-                        src={bank}
+                        src={thatcher}
                     />
+                    <div className={team.gradientOverlay} />
                     <div className={team.textOverlay}>
-                        <div className={team.mainText}></div>
+                        <div>Thatcher</div>
+                        <div className={team.overlayBtn}/>
                     </div>
 
                 </div>
@@ -55,11 +69,12 @@ export default function Team() {
                 <div className={team.flexCard}>
                     <Image
                         className={team.flexBackground}
-                        src={bank}
+                        src={twitch}
                     />
+                    <div className={team.gradientOverlay} />
                     <div className={team.textOverlay}>
-                        <div className={team.mainText}></div>
-                        <div className={team.overlayBtn}></div>
+                        <div>Twitch</div>
+                        <div className={team.overlayBtn}/>
                     </div>
 
                 </div>

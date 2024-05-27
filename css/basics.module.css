@@ -9,18 +9,32 @@
     margin: 50px auto;
 
     gap: 20px;
+
+    border: solid 2px green;
 }
 
-.flexCard{
-    width: 24vw;
+.leftCol{
+    flex: 5;
     height: calc(24vw * 1.77);
 
-    max-width: calc(1080px / 3);
     max-height: calc(1080px * 1.77 / 3);
 
     overflow: hidden;
     position: relative;
 
+
+    border: transparent 1px solid;
+    padding: 5px;
+}
+
+.rightCol{
+    flex: 3;
+    height: calc(24vw * 1.77);
+
+    max-height: calc(1080px * 1.77 / 3);
+
+    overflow: hidden;
+    position: relative;
 
     border: transparent 1px solid;
     padding: 5px;
@@ -35,12 +49,13 @@
     transition: all 0.2s;
 }
 
-.flexCard:hover .flexBackground{
+.leftCol:hover .flexBackground,
+.rightCol:hover .flexBackground{
     scale: 1;
     transition: all 0.2s;
 }
 
-.flexCard:hover{
+.leftCol:hover, .rightCol:hover{
     border: gold 1px solid;
     cursor: pointer;
     transition: all 0.2s;
@@ -77,6 +92,3 @@
     background: rgb(25, 25, 25);
     border-radius: 50px;
 }
-
-
-
