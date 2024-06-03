@@ -21,7 +21,7 @@ export default function Team() {
         <div className={section.sectionContainer}>
 
             <div className={section.caption}>
-                Meet the 71 playable operators from all hailing from one of
+                Meet 4 of the 71 playable operators from all hailing from one of
                 the 32 CTUs in the game.
             </div>
 

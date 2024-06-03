@@ -60,7 +60,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to top, black, transparent 50%)
+    background: linear-gradient(to top, black, transparent 50%);
+}
+
+.scrollCard:hover .gradientOverlay{
+    background: linear-gradient(to top, black, transparent);
 }
 
 .textOverlay{
@@ -75,8 +79,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
-    z-index: 5;
 }
 
 .mainText{

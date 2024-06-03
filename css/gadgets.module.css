@@ -11,27 +11,16 @@
     gap: 20px;
 }
 
-.leftCol{
-    flex: 5;
+.flexCard{
+    width: 24vw;
     height: calc(24vw * 1.77);
 
+    max-width: calc(1080px / 3);
     max-height: calc(1080px * 1.77 / 3);
 
     overflow: hidden;
     position: relative;
 
-    border: transparent 1px solid;
-    padding: 5px;
-}
-
-.rightCol{
-    flex: 3;
-    height: calc(24vw * 1.77);
-
-    max-height: calc(1080px * 1.77 / 3);
-
-    overflow: hidden;
-    position: relative;
 
     border: transparent 1px solid;
     padding: 5px;
@@ -46,14 +35,12 @@
     transition: all 0.2s;
 }
 
-.leftCol:hover .flexBackground,
-.rightCol:hover .flexBackground{
+.flexCard:hover .flexBackground{
     scale: 1;
     transition: all 0.2s;
 }
 
-.leftCol:hover,
-.rightCol:hover{
+.flexCard:hover{
     border: gold 1px solid;
     cursor: pointer;
     transition: all 0.2s;
@@ -78,6 +65,8 @@
     display: flex;
     justify-content: space-around;
 
+    z-index: 5;
+
     font-size: 2rem;
     font-weight: 600;
     color: white;  
@@ -88,3 +77,6 @@
     background: rgb(25, 25, 25);
     border-radius: 50px;
 }
+
+
+

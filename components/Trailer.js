@@ -8,6 +8,12 @@ export default function Trailer(){
         <div className={trailer.cardContainer}>
 
             <div className={trailer.banner}>
+                <Image
+                    className={trailer.image}
+                    src={shieldLineup}
+                    fill
+                />
+
                 <div className={trailer.textOverlay}>
                     <div className={trailer.mainText}>Endless tension.</div>
                     <div className={trailer.mainText}>Endless action.</div>
@@ -17,12 +23,6 @@ export default function Trailer(){
                         reigns supreme
                     </div>
                 </div>
-
-                <Image
-                    className={trailer.image}
-                    src={shieldLineup}
-                    fill
-                />
             </div>
 
             <iframe
