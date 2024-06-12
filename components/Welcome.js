@@ -4,6 +4,9 @@ import VideoPlayer from "./VideoPlayer"
 export default function Welcome() {
     return (   
     <div className={welcome.Hero}>
+
+        <VideoPlayer/>
+
         <div className={welcome.textOverlayContainer}>
             <div className={welcome.menu}>
                 <button className={welcome.menuItem}>Welcome</button>
@@ -26,11 +29,8 @@ export default function Welcome() {
                     <div className={welcome.ctaButton}>Buy Now </div>
                 </div>
 
-                
             </div>
         </div>
-
-        <VideoPlayer/>
     </div>
     );
 }

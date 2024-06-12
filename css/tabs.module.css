@@ -19,13 +19,58 @@
     right: 0;
 
     background: rgb(25, 25, 25);
+    animation: slide-in ease-out 0.5s;
+}
+
+.tabBackgroundHidden{
+    width: 80%;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    right: -85%;
+
+    background: rgb(25, 25, 25);
+    animation: slide-out ease-out 0.5s;
+}
+
+@keyframes slide-in{
+    from{
+        right: -85%;
+    }
+    to{
+        right: 0;
+    }
+}
+
+@keyframes slide-out{
+    from{
+        right: 0;
+    }
+    to{
+        right:-85%;
+        opacity: 0.6;
+    }
+}
+
+.closeTab{
+    height: 50px;
+    width: 50px;
+
+    position: absolute;
+    margin: 25px;
+    border-radius: 50px;
+    background-color: white;
+
+    z-index: 10;
+    cursor: pointer;
 }
 
 .tabContentContainer{
     width: 100%;
     height: 100%;
 
-    background: transparent;
+    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -37,10 +82,17 @@
     display: none;
 }
 
+.titleRow{
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+    min-width: 50%;
+}
+
 .tabRow{
     display: flex;
 
-    padding: 50px;
+    padding: 80px;
 }
 
 .subHeader{
@@ -49,6 +101,7 @@
     color: white;
     font-size: 2.5rem;
     font-weight: 600;
+    padding-bottom: 50px;
 }
 
 .text{
