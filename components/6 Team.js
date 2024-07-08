@@ -4,6 +4,9 @@ import section from "../css/section.module.css"
 import team from "../css/team.module.css"
 import Image from "next/image";
 
+import SlideUp from "./SlideUp";
+import FadeIn from "./FadeIn";
+
 import ash from "../public/profile-ash.webp"
 import mira from "../public/profile-mira.webp"
 import thatcher from "../public/profile-thatcher.webp"
@@ -18,14 +21,14 @@ export default function Team() {
 
 
     return(
-        <div className={section.sectionContainer}>
+        <SlideUp className={section.sectionContainer}>
 
-            <div className={section.caption}>
+            <SlideUp className={section.caption}>
                 Meet 4 of the 71 playable operators from all hailing from one of
                 the 32 CTUs in the game.
-            </div>
+            </SlideUp>
 
-            <div className={team.flexContainer}>
+            <SlideUp className={team.flexContainer}>
 
                 <div className={team.flexCard}>
                     <Image
@@ -40,7 +43,7 @@ export default function Team() {
 
                 </div>
 
-                <div className={team.flexCard}>
+                <SlideUp className={team.flexCard}>
                     <Image
                         className={team.flexBackground}
                         src={mira}
@@ -51,7 +54,7 @@ export default function Team() {
                         <div className={team.overlayBtn}/>
                     </div>
 
-                </div>
+                </SlideUp>
 
                 <div className={team.flexCard}>
                     <Image
@@ -65,8 +68,8 @@ export default function Team() {
                     </div>
 
                 </div>
-
-                <div className={team.flexCard}>
+                
+                <SlideUp className={team.flexCard}>
                     <Image
                         className={team.flexBackground}
                         src={twitch}
@@ -77,9 +80,9 @@ export default function Team() {
                         <div className={team.overlayBtn}/>
                     </div>
 
-                </div>
+                </SlideUp>
 
-            </div>
-        </div>
+            </SlideUp>
+        </SlideUp>
     );
 }

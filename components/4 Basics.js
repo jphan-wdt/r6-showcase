@@ -6,6 +6,9 @@ import basics from "../css/basics.module.css"
 import tabs from "../css/tabs.module.css"
 import Image from "next/image"
 
+import SlideUp from "./SlideUp"
+import FadeIn from "./FadeIn"
+
 import ash from "../public/maps-bank.webp"
 
 export default function Basics() {
@@ -31,16 +34,16 @@ export default function Basics() {
 
     return(
         <>
-            <div className={section.sectionContainer}>
-                <div className={section.caption}>
+            <SlideUp className={section.sectionContainer}>
+                <SlideUp className={section.caption}>
                     Engage in intense close-quarter combat.
                     Every move matters, every second counts.
                     Master the fundamentals and play your part in victory.
-                </div>
+                </SlideUp>
 
-                <div className={basics.flexContainer}>
+                <SlideUp className={basics.flexContainer}>
 
-                    <div className={basics.leftCol} onClick={toggleTab1}>
+                    <SlideUp className={basics.leftCol} onClick={toggleTab1}>
                         <Image
                             className={basics.flexBackground}
                             src={ash}
@@ -50,7 +53,7 @@ export default function Basics() {
                             <div>Game 1</div>
                             <div className={basics.overlayBtn} />
                         </div>
-                    </div>
+                    </SlideUp>
             
                     <div className={basics.rightCol}  onClick={toggleTab2}>
                         <Image
@@ -64,8 +67,8 @@ export default function Basics() {
                         </div>
                     </div>
 
-                </div>
-            </div>
+                </SlideUp>
+            </SlideUp>
 
             
             <div className={tab1Visible ? tabs.tabContainer : tabs.none} >

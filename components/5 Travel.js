@@ -2,6 +2,9 @@ import section from "../css/section.module.css"
 import scroll from "../css/travel.module.css"
 import Image from "next/image"
 
+import SlideUp from "./SlideUp"
+import FadeIn from "./FadeIn"
+
 import bank from "../public/maps-bank.webp"
 import border from "../public/maps-border.webp"
 import chalet from "../public/maps-chalet.webp"
@@ -10,16 +13,16 @@ import favela from "../public/maps-favela.webp"
 
 export default function Travel() {
     return(
-        <div className={section.sectionContainer}>
+        <SlideUp className={section.sectionContainer}>
     
-                <div className={section.caption}>
+                <SlideUp className={section.caption}>
                     Attack and defend on the 25 maps in 20+ countries. From the
                     Spanish seashores of Ibiza, to the bustling Brazilian 
                     favelas and everything in between.
-                </div>
+                </SlideUp>
 
 
-                <div className={scroll.scrollContainer}>
+                <SlideUp className={scroll.scrollContainer}>
 
                     <div className={scroll.scrollCard}>
                         <Image
@@ -38,7 +41,7 @@ export default function Travel() {
                         </div>
                     </div>
 
-                    <div className={scroll.scrollCard}>
+                    <SlideUp className={scroll.scrollCard}>
                         <Image
                             className={scroll.cardBackground}
                             src={favela} 
@@ -51,9 +54,9 @@ export default function Travel() {
                                 this map supports exterior shell destruction which renders it
                                 as the most destructible to date. </div>
                         </div>
-                    </div>
+                    </SlideUp>
 
-                    <div className={scroll.scrollCard}>
+                    <SlideUp className={scroll.scrollCard}>
                         <Image
                             className={scroll.cardBackground}
                             src={chalet} 
@@ -66,9 +69,9 @@ export default function Travel() {
                                 This area contrasts the warm, cozy mood of its interiors
                                 with the cold, constrained visibility of its exteriors. </div>
                         </div>
-                    </div>
+                    </SlideUp>
 
-                    <div className={scroll.scrollCard}>
+                    <SlideUp className={scroll.scrollCard}>
                         <Image
                             className={scroll.cardBackground}
                             src={border} 
@@ -82,9 +85,9 @@ export default function Travel() {
                                 open air pathways make this the most destructible and open planned
                                 map to date. </div>
                         </div>
-                    </div>
+                    </SlideUp>
 
-                    <div className={scroll.scrollCard}>
+                    <SlideUp className={scroll.scrollCard}>
                         <Image
                             className={scroll.cardBackground}
                             src={bank} 
@@ -98,11 +101,11 @@ export default function Travel() {
                                 as they make their way through progressively more fortified areas of the
                                 building. </div>
                         </div>
-                    </div>
+                    </SlideUp>
 
-                </div>
+                </SlideUp>
             
-        </div>
+        </SlideUp>
         
     );
 }

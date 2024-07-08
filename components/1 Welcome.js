@@ -1,5 +1,6 @@
 import welcome from "../css/welcome.module.css"
 import VideoPlayer from "./VideoPlayer"
+import FadeIn from "./FadeIn";
 
 export default function Welcome() {
     return (   
@@ -7,7 +8,7 @@ export default function Welcome() {
 
         <VideoPlayer/>
 
-        <div className={welcome.textOverlayContainer}>
+        <FadeIn className={welcome.textOverlayContainer}>
             <div className={welcome.menu}>
                 <button className={welcome.menuItem}>Welcome</button>
                 <button className={welcome.menuItem}>Learn the Basics</button>
@@ -30,7 +31,7 @@ export default function Welcome() {
                 </div>
 
             </div>
-        </div>
+        </FadeIn>
     </div>
     );
 }

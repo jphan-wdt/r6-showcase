@@ -2,6 +2,7 @@ import trailer from "../css/trailer.module.css"
 import section from "../css/section.module.css"
 import Image from "next/image";
 import shieldLineup from "../public/shield-lineup.jpg"
+import SlideUp from "./SlideUp";
 
 export default function Trailer(){
     return(
@@ -15,13 +16,13 @@ export default function Trailer(){
                 />
 
                 <div className={trailer.textOverlay}>
-                    <div className={trailer.mainText}>Endless tension.</div>
-                    <div className={trailer.mainText}>Endless action.</div>
-                    <div className={trailer.subText}>
+                    <SlideUp className={trailer.mainText}>Endless tension.</SlideUp >
+                    <SlideUp className={trailer.mainText}>Endless action.</SlideUp >
+                    <SlideUp className={trailer.subText}>
                         Discover an elite, tactical shooter where
                         superior planning and flawless execution
                         reigns supreme
-                    </div>
+                    </SlideUp >
                 </div>
             </div>
 

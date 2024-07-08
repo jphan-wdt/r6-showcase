@@ -1,13 +1,13 @@
-
 import explore from "../css/explore.module.css"
 import section from "../css/section.module.css"
+import SlideUp from "./SlideUp";
 
 export default function Explore() {
     return(
-        <div className={explore.cardContainer}>
-            <div>
+        <SlideUp className={explore.cardContainer}>
+            <SlideUp>
                 <i className={explore.text}>"There's no hiding. Not for you, not for me. Try not to disappoint me, soldier."</i>
-            </div>
+            </SlideUp>
             <iframe
                 src="https://www.youtube.com/embed/toO4W1bYtq0?si=bNjREaL7PTupkUuh"
                 title="YouTube video player"
@@ -17,6 +17,6 @@ export default function Explore() {
                 allowfullscreen
             />
                 
-        </div>
+        </SlideUp>
     );
 }

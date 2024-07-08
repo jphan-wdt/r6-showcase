@@ -1,5 +1,6 @@
 ##  Packages
 [next-videos](https://www.npmjs.com/package/next-videos)
+[framer-motion](https://www.framer.com/motion/)
 
 I do not own any images or videos, they belong to respective owners.
 

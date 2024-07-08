@@ -1,12 +1,13 @@
 import page from "./page.module.css";
-import Welcome from "@/components/Welcome";
-import Explore from "@/components/Explore";
-import Trailer from "@/components/Trailer";
-import Basics from "@/components/Basics";
-import Team from "@/components/Team";
-import Gadgets from "@/components/Gadgets";
-import Destruction from "@/components/Destruction";
-import Travel from "@/components/Travel";
+import Welcome from "@/components/1 Welcome";
+import Explore from "@/components/2 Explore";
+import Trailer from "@/components/3 Trailer";
+import Basics from "@/components/4 Basics";
+import Travel from "@/components/5 Travel";
+import Team from "@/components/6 Team";
+import Gadgets from "@/components/7 Gadgets";
+import Destruction from "@/components/7 Destruction";
+
 
 export default function Home() {
   return (
