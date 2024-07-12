@@ -1,8 +1,10 @@
 ##  Packages
+
 [next-videos](https://www.npmjs.com/package/next-videos)
+
 [framer-motion](https://www.framer.com/motion/)
 
-I do not own any images or videos, they belong to respective owners.
+Videos and images from [Rainbow Six Wiki](https://rainbowsix.fandom.com/wiki/Rainbow_Six_Wiki) and [Youtube]
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

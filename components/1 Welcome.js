@@ -12,10 +12,11 @@ export default function Welcome() {
             <div className={welcome.menu}>
                 <button className={welcome.menuItem}>Welcome</button>
                 <button className={welcome.menuItem}>Learn the Basics</button>
+                <button className={welcome.menuItem}>Travel the World</button>
                 <button className={welcome.menuItem}>Meet Team Rainbow</button>
                 <button className={welcome.menuItem}>Master Gadgetry</button>
                 <button className={welcome.menuItem}>Embrace Destruction</button>
-                <button className={welcome.menuItem}>Travel the World</button>
+                
             </div>
             <div className={welcome.rightCol}>
                 <div className={welcome.title}>Strategic Perfection</div>

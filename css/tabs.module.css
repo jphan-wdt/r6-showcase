@@ -19,19 +19,7 @@
     right: 0;
 
     background: rgb(25, 25, 25);
-    animation: slide-in ease-out 0.5s;
-}
-
-.tabBackgroundHidden{
-    width: 80%;
-    height: 100vh;
-
-    position: fixed;
-    top: 0;
-    right: -85%;
-
-    background: rgb(25, 25, 25);
-    animation: slide-out ease-out 0.5s;
+    
 }
 
 @keyframes slide-in{
@@ -40,16 +28,6 @@
     }
     to{
         right: 0;
-    }
-}
-
-@keyframes slide-out{
-    from{
-        right: 0;
-    }
-    to{
-        right:-85%;
-        opacity: 0.6;
     }
 }
 

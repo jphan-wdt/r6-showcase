@@ -14,12 +14,6 @@ import twitch from "../public/profile-twitch.webp"
 
 
 export default function Gadgets() {
-
-    function handleClick() {
-        
-    }
-
-
     return(
         <SlideUp className={section.sectionContainer}>
 

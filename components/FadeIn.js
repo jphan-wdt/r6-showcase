@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
-const FadeIn = ({ children, className }) => {
+const FadeIn = ({ children, className, delay }) => {
   const controls = useAnimation()
   const ref = useRef(null)
   const inView = useInView(ref)
@@ -25,7 +25,7 @@ const FadeIn = ({ children, className }) => {
       initial="hidden"
       animate={controls}
       variants={variants}
-      transition={{ duration: 1.2, ease: "easeIn"}}
+      transition={{ duration: 1.2, ease: "easeIn", delay: delay}}
       className={className}
     >
       {children}

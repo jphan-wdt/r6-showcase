@@ -41,7 +41,7 @@ export default function Travel() {
                         </div>
                     </div>
 
-                    <SlideUp className={scroll.scrollCard}>
+                    <SlideUp delay={0.4} className={scroll.scrollCard}>
                         <Image
                             className={scroll.cardBackground}
                             src={favela} 

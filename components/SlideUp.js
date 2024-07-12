@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
-const SlideUp = ({ children, className, onClick }) => {
+const SlideUp = ({ children, className, onClick, delay }) => {
   const controls = useAnimation()
   const ref = useRef(null)
   const inView = useInView(ref)
@@ -15,8 +15,8 @@ const SlideUp = ({ children, className, onClick }) => {
   }, [controls, inView]);
 
   const variants = {
-    hidden: {y: 80 },
-    visible: {y: 0 },
+    hidden: {y: 120, opacity: 0 },
+    visible: {y: 0, opacity: 1},
   };
 
   return (
@@ -25,7 +25,7 @@ const SlideUp = ({ children, className, onClick }) => {
       initial="hidden"
       animate={controls}
       variants={variants}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut", delay: delay }}
       className={className}
       onClick={onClick}
     >

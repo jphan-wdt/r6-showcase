@@ -6,18 +6,19 @@ import Basics from "@/components/4 Basics";
 import Travel from "@/components/5 Travel";
 import Team from "@/components/6 Team";
 import Gadgets from "@/components/7 Gadgets";
-import Destruction from "@/components/7 Destruction";
+import Destruction from "@/components/8 Destruction";
+
+import SlideUp from "@/components/SlideUp";
 
 
 export default function Home() {
   return (
     
     <main className={page.mainContainer}>
-      {/* <div className={page.scrollwatcher}/> */}
       <Welcome/>
 
-      <div className={page.subHeader}>Explore</div>
-      <div className={page.caption}>What's new</div>
+      <SlideUp className={page.subHeader}>Explore</SlideUp>
+      <SlideUp className={page.caption}>What's new</SlideUp>
       <Explore/>
 
       <Trailer/>
@@ -36,8 +37,7 @@ export default function Home() {
 
       <div className={page.subHeader}>Embrace Destruction</div>
       <Destruction/>
-
-
+      
     </main>
   );
 }
