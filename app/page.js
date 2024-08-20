@@ -4,12 +4,11 @@ import Explore from "@/components/2 Explore";
 import Trailer from "@/components/3 Trailer";
 import Basics from "@/components/4 Basics";
 import Travel from "@/components/5 Travel";
-import Team from "@/components/6 Team";
-import Gadgets from "@/components/7 Gadgets";
-import Destruction from "@/components/8 Destruction";
+import Destruction from "@/components/6 Destruction";
+import Team from "@/components/7 Team";
+import Gadgets from "@/components/8 Gadgets";
 
 import SlideUp from "@/components/SlideUp";
-
 
 export default function Home() {
   return (
@@ -29,15 +28,15 @@ export default function Home() {
       <div className={page.subHeader}>Travel the World</div>
       <Travel/>
 
+      <Destruction/>
+
       <div className={page.subHeader}>Meet Team Rainbow</div>
       <Team/>
 
       <div className={page.subHeader}>Master Gadgetry</div>
       <Gadgets/>
 
-      <div className={page.subHeader}>Embrace Destruction</div>
-      <Destruction/>
-      
+
     </main>
   );
 }

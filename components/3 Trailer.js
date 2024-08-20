@@ -1,14 +1,22 @@
+'use client';
+
 import trailer from "../css/trailer.module.css"
 import section from "../css/section.module.css"
 import Image from "next/image";
 import shieldLineup from "../public/shield-lineup.jpg"
 import SlideUp from "./SlideUp";
+import { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 export default function Trailer(){
+
     return(
         <div className={trailer.cardContainer}>
 
-            <div className={trailer.banner}>
+            <motion.div
+                className={trailer.banner}
+                
+            >
                 <Image
                     className={trailer.image}
                     src={shieldLineup}
@@ -16,15 +24,15 @@ export default function Trailer(){
                 />
 
                 <div className={trailer.textOverlay}>
-                    <SlideUp className={trailer.mainText}>Endless tension.</SlideUp >
-                    <SlideUp className={trailer.mainText}>Endless action.</SlideUp >
+                    <SlideUp className={trailer.mainText}>Breach. Attack.</SlideUp >
+                    <SlideUp className={trailer.mainText}>Defend. Secure.</SlideUp >
                     <SlideUp className={trailer.subText}>
                         Discover an elite, tactical shooter where
                         superior planning and flawless execution
                         reigns supreme
                     </SlideUp >
                 </div>
-            </div>
+            </motion.div>
 
             <iframe
                 src="https://www.youtube.com/embed/RPY3TQSolm4?si=AfNnePVL95ZvncDB"

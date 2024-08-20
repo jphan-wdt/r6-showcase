@@ -24,7 +24,7 @@ export default function Travel() {
 
                 <SlideUp className={scroll.scrollContainer}>
 
-                    <div className={scroll.scrollCard}>
+                    <SlideUp className={scroll.scrollCard}>
                         <Image
                             className={scroll.cardBackground}
                             src={coastline}
@@ -39,9 +39,9 @@ export default function Travel() {
                                 ready for a surround flow of combat laced with
                                 chaotic rushes as you explore a paradise gone wrong. </div>
                         </div>
-                    </div>
+                    </SlideUp>
 
-                    <SlideUp delay={0.4} className={scroll.scrollCard}>
+                    <SlideUp delay={0.2} className={scroll.scrollCard}>
                         <Image
                             className={scroll.cardBackground}
                             src={favela} 
