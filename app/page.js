@@ -22,18 +22,18 @@ export default function Home() {
 
       <Trailer/>
 
-      <div className={page.subHeader}>Learn the Basics</div>
+      <div id='basics' className={page.subHeader}>Learn the Basics</div>
       <Basics/>
 
-      <div className={page.subHeader}>Travel the World</div>
+      <div id='travel' className={page.subHeader}>Travel the World</div>
       <Travel/>
 
-      <Destruction/>
+      <Destruction id='destruction'/>
 
-      <div className={page.subHeader}>Meet Team Rainbow</div>
+      <div id='team' className={page.subHeader}>Meet Team Rainbow</div>
       <Team/>
 
-      <div className={page.subHeader}>Master Gadgetry</div>
+      <div id='gadgets' className={page.subHeader}>Master Gadgetry</div>
       <Gadgets/>
 
 

@@ -83,6 +83,10 @@ button.menuItem:nth-child(1){
     cursor: pointer;
 }
 
+.ctaButton:visited {
+    color: white;
+    text-decoration: none;
+}
 .ctaButton:hover{
     background-color: white;
     color: black;

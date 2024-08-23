@@ -14,25 +14,99 @@ import ash from "../public/maps-bank.webp"
 import { motion, AnimatePresence, easeInOut } from "framer-motion"
 
 export default function Basics() {
-    const [tab1Visible, setTab1Visible] = useState(false);
-    const [tab2Visible, setTab2Visible] = useState(false);
 
-    const toggleTab1 = () => {
-        console.log(tab1Visible)
-        setTab1Visible(!tab1Visible);
+    const tabData = {
+        tab1: [
+            { header: 'Gameplay' },
+            { 
+                header: 'PVP',
+                text: `The game features three main PVP gamemodes: Bomb, Hostage, Secure Area. Each 
+                multiplayer gamemode is a 5v5, with players having four minutes in a round to complete the 
+                respective objective. Players only have one life and a set amount of health. Matches are won 
+                once at least three rounds have been won.` 
+            },
+            { 
+                header: 'PVE',
+                text: `The game also features two PVE gamemodes: Situations and Terrorist Hunt. The 
+                Situations gamemode has ten tutorial missions that allow players to practice gameplay 
+                concepts offline against bots and gain a better familiarity with the game. Terrorist Hunt 
+                returns from past installments of the series, sharing many gamemodes with PVP. It also 
+                features the "Classic" gamemode which tasks players with eliminating a set number of 
+                terrorists based on difficulty who have fortified themselves on a map.` 
+            },
+            { 
+                header: 'Matches',
+                text: `Matches are conducted in a 5v5 manner, with each player only receiving one life per 
+                round. As such, it is extremely important to communicate with teammates and plan assaults when
+                 attacking or defense when defending. Attackers start each round with 45 seconds to send a 
+                 Drone to survey and detect items in the environment, allowing players to find enemies and 
+                 targets and mark them. Defenders, on the other hand, have the ability to fortify their 
+                 location and prepare for the inevitable assault by the Attackers.` 
+            },
+            { 
+                header: 'Operators',
+                text: `Players may choose one Operator per round. Additionally, once an Operator is 
+                chosen, it will be locked out from being chosen by other players. Attackers have the 
+                option to change Operators during the Preparation Phase of a round.` 
+            },
+            { 
+                header: 'Deployment',
+                text: `Each map features multiple locations for both the Attackers and Defenders to choose 
+                from, greatly increasing the importance in conducting surveillance. Each map is designed to 
+                be close-quartered oriented, and have an emphasis on verticality and destruction.` 
+            },
+        ],
+        tab2: [
+            { header: 'Features' },
+            { 
+                header: 'Destruction',
+                text: `The destruction system allows players to break structures by planting explosives on 
+                them or to make bullet holes on walls by shooting it. The environments of the game feature a 
+                layered material system, in which environmental objects of different materials show different 
+                reactions to player's attack. Players may gain tactical advantages through environmental 
+                destruction, and that the system aims at encouraging players to utilize creativity and 
+                strategy. In order to create a realistic gameplay, a bullet penetration system is featured, 
+                in which bullets deal less damage when they hit enemies through structures. This creates an 
+                ever-changing environment on the map, making it vital for players to be aware of their 
+                surroundings and work together.` 
+            },
+            { 
+                header: 'Roles',
+                text: `The game features a character-based system for multiplayer matches in the form of 
+                Operators. There are two types of Operators: Attackers and 
+                Defenders. As their name implies, Attacking and Defending Operators feature unique skills and 
+                gadgets that are specialized for their respective role. This also applies to how much health 
+                or running speed an Operator may have.` 
+            },
+            { 
+                header: 'Arsenal',
+                text: `Each Operator has access to one to three primary weapons, a secondary weapon, and 
+                two gadgets. There are currently one hundred and three weapons and twenty-two gadgets. 
+                Each weapon is unique to specific Operators. Weapon performance may be customized through the 
+                use of weapon attachments.` 
+            },
+        ]
+      };
+
+    const [activeTab, setActiveTab] = useState(null);
+    const [tabVisible, setTabVisible] = useState(false)
+
+    const openTab = (tabIndex) => {
+        setTabVisible(true)
+        setActiveTab(tabData[tabIndex])
     }
 
-    const toggleTab2 = () => {
-        setTab2Visible(!tab2Visible);
+    const closeTab = () => {
+        setTabVisible(false)
     }
 
     useEffect(() => {
-        if (tab1Visible || tab2Visible) {
+        if (tabVisible) {
             document.body.classList.add('no-scroll');
         } else {
             document.body.classList.remove('no-scroll');
         }
-    }, [tab1Visible, tab2Visible]);
+    }, [tabVisible]);
 
     return(
         <>
@@ -45,26 +119,26 @@ export default function Basics() {
 
                 <SlideUp className={basics.flexContainer}>
 
-                    <SlideUp className={basics.leftCol} onClick={toggleTab1}>
+                    <SlideUp className={basics.leftCol} onClick={() => openTab('tab1')}>
                         <video className={basics.flexBackground} autoPlay muted loop>
                             <source src={require('../public/0516-Prep.mp4')}/>
                             Your browser does not support the video tag.
                         </video>
                         <div className={basics.gradientOverlay} />
                         <div className={basics.textOverlay}>
-                            <div>Game 1</div>
+                            <div>Gameplay</div>
                             <div className={basics.overlayBtn} />
                         </div>
                     </SlideUp>
             
-                    <div className={basics.rightCol}  onClick={toggleTab2}>
+                    <div className={basics.rightCol}  onClick={() => openTab('tab2')}>
                         <video className={basics.flexBackground} autoPlay muted loop>
                             <source src={require('../public/0516-Intro3.mp4')}/>
                             Your browser does not support the video tag.
                         </video>
                         <div className={basics.gradientOverlay} />
                         <div className={basics.textOverlay}>
-                            <div>Game 2</div>
+                            <div>Features</div>
                             <div className={basics.overlayBtn} />
                         </div>
                     </div>
@@ -74,7 +148,7 @@ export default function Basics() {
 
             
             <AnimatePresence>
-                {tab1Visible && (
+                {tabVisible && (
                     <div className={tabs.tabContainer} >
                         <motion.div
                             className={tabs.tabBackground}
@@ -83,72 +157,18 @@ export default function Basics() {
                             exit={{x: "100%"}}
                             transition={{ ease: easeInOut, duration: 0.5 }}
                         >
-                                <div className={tabs.closeTab} onClick={toggleTab1} />
+                                <div className={tabs.closeTab} onClick={closeTab} />
                                 <div className={tabs.tabContentContainer}>
-                                    <div className={tabs.tabRow}>
-                                        <FadeIn className={tabs.titleRow}>
-                                            <div className={tabs.subHeader}>TITLE 1</div>
-                                            <div className={tabs.text}>CAPTION</div>
+
+                                    {activeTab.map((row) => (
+
+                                        <FadeIn delay={0.2} className={tabs.tabRow}>
+                                            <div className={tabs.subHeader}>{row.header}</div>
+                                            <div className={tabs.text}>{row.text}</div>
                                         </FadeIn>
-                                    </div>
 
-                                    <FadeIn delay={0.2} className={tabs.tabRow}>
-                                        <div className={tabs.subHeader}>TEST</div>
-                                        <div className={tabs.text}>TEST</div>
-                                    </FadeIn>
+                                    ))}
 
-                                    <FadeIn delay={0.4} className={tabs.tabRow}>
-                                        <div className={tabs.subHeader}>TEST</div>
-                                        <div className={tabs.text}>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis neque vestibulum est lobortis, sit amet pharetra lorem dapibus. Quisque sit amet ultrices mi, ac consectetur mauris. Donec vel odio sem. Aenean et magna ex. Duis elementum feugiat nisi eget interdum. Curabitur iaculis ut quam fermentum tempus. Aenean suscipit metus sit amet tellus posuere, maximus consectetur mauris ullamcorper. Aenean egestas pellentesque libero, vitae egestas odio sodales in. Praesent vitae sodales neque. Etiam mi urna, commodo quis aliquam nec, auctor in ex. Duis porta urna sed mauris sagittis fringilla. Proin tincidunt imperdiet ipsum. In rutrum, ante id laoreet vestibulum, est nibh efficitur arcu, quis ultrices turpis turpis id diam. Nullam sagittis efficitur ipsum non vehicula.
-                                            Fusce sagittis arcu non porta semper. Vestibulum nec rutrum ipsum. Praesent imperdiet tempor mauris eu auctor. Proin arcu arcu, fringilla ut felis non, pellentesque interdum lacus. Morbi id nulla vitae arcu volutpat facilisis. Maecenas sapien mauris, scelerisque id turpis ut, convallis rutrum lorem. Nam elementum elementum urna, ac accumsan nibh. Donec tempus auctor ex, quis eleifend est gravida ut. Suspendisse nec nisl scelerisque, dapibus erat eget, accumsan lorem. Curabitur semper tincidunt dictum. Vivamus dolor diam, bibendum id mattis id, scelerisque id ex.
-                                        </div>
-                                    </FadeIn>
-
-                                    <FadeIn className={tabs.tabRow}>
-                                        <div className={tabs.subHeader}>TEST</div>
-                                        <div className={tabs.text}>TEST</div>
-                                    </FadeIn>
-                                </div>
-                        </motion.div>
-                    </div>
-                )}
-
-                {tab2Visible && (
-                    <div className={tabs.tabContainer} >
-                        <motion.div
-                            className={tabs.tabBackground}
-                            initial={{x: "100%"}}
-                            animate={{x: 0}}
-                            exit={{x: "100%"}}
-                            transition={{ ease: easeInOut, duration: 0.5 }}
-                        >
-                                <div className={tabs.closeTab} onClick={toggleTab2} />
-                                <div className={tabs.tabContentContainer}>
-                                    <div className={tabs.tabRow}>
-                                        <FadeIn className={tabs.titleRow}>
-                                            <div className={tabs.subHeader}>TITLE 1</div>
-                                            <div className={tabs.text}>CAPTION</div>
-                                        </FadeIn>
-                                    </div>
-
-                                    <FadeIn delay={0.2} className={tabs.tabRow}>
-                                        <div className={tabs.subHeader}>TEST</div>
-                                        <div className={tabs.text}>TEST</div>
-                                    </FadeIn>
-
-                                    <FadeIn delay={0.4} className={tabs.tabRow}>
-                                        <div className={tabs.subHeader}>TEST</div>
-                                        <div className={tabs.text}>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis neque vestibulum est lobortis, sit amet pharetra lorem dapibus. Quisque sit amet ultrices mi, ac consectetur mauris. Donec vel odio sem. Aenean et magna ex. Duis elementum feugiat nisi eget interdum. Curabitur iaculis ut quam fermentum tempus. Aenean suscipit metus sit amet tellus posuere, maximus consectetur mauris ullamcorper. Aenean egestas pellentesque libero, vitae egestas odio sodales in. Praesent vitae sodales neque. Etiam mi urna, commodo quis aliquam nec, auctor in ex. Duis porta urna sed mauris sagittis fringilla. Proin tincidunt imperdiet ipsum. In rutrum, ante id laoreet vestibulum, est nibh efficitur arcu, quis ultrices turpis turpis id diam. Nullam sagittis efficitur ipsum non vehicula.
-                                            Fusce sagittis arcu non porta semper. Vestibulum nec rutrum ipsum. Praesent imperdiet tempor mauris eu auctor. Proin arcu arcu, fringilla ut felis non, pellentesque interdum lacus. Morbi id nulla vitae arcu volutpat facilisis. Maecenas sapien mauris, scelerisque id turpis ut, convallis rutrum lorem. Nam elementum elementum urna, ac accumsan nibh. Donec tempus auctor ex, quis eleifend est gravida ut. Suspendisse nec nisl scelerisque, dapibus erat eget, accumsan lorem. Curabitur semper tincidunt dictum. Vivamus dolor diam, bibendum id mattis id, scelerisque id ex.
-                                        </div>
-                                    </FadeIn>
-
-                                    <FadeIn className={tabs.tabRow}>
-                                        <div className={tabs.subHeader}>TEST</div>
-                                        <div className={tabs.text}>TEST</div>
-                                    </FadeIn>
                                 </div>
                         </motion.div>
                     </div>

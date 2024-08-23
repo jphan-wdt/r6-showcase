@@ -1,8 +1,21 @@
+'use client'
+
 import welcome from "../css/welcome.module.css"
 import VideoPlayer from "./VideoPlayer"
 import FadeIn from "./FadeIn";
 
 export default function Welcome() {
+
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            console.log(`Scrolling to section: ${sectionId}`);
+          section.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            console.log(`NO FOUND to section: ${sectionId}`);
+        }
+      };
+
     return (   
     <div className={welcome.Hero}>
 
@@ -11,11 +24,10 @@ export default function Welcome() {
         <FadeIn className={welcome.textOverlayContainer}>
             <div className={welcome.menu}>
                 <button className={welcome.menuItem}>Welcome</button>
-                <button className={welcome.menuItem}>Learn the Basics</button>
-                <button className={welcome.menuItem}>Travel the World</button>
-                <button className={welcome.menuItem}>Meet Team Rainbow</button>
-                <button className={welcome.menuItem}>Master Gadgetry</button>
-                <button className={welcome.menuItem}>Embrace Destruction</button>
+                <button className={welcome.menuItem} onClick={() => scrollToSection('basics')}>Learn the Basics</button>
+                <button className={welcome.menuItem} onClick={() => scrollToSection('travel')}>Travel the World</button>
+                <button className={welcome.menuItem} onClick={() => scrollToSection('team')}>Meet Team Rainbow</button>
+                <button className={welcome.menuItem} onClick={() => scrollToSection('gadgets')}>Master Gadgetry</button>
                 
             </div>
             <div className={welcome.rightCol}>
@@ -27,8 +39,8 @@ export default function Welcome() {
                 </div>
 
                 <div className={welcome.ctaContainer}>
-                    <div className={welcome.ctaButton}>Learn More + </div>
-                    <div className={welcome.ctaButton}>Buy Now </div>
+                    <a href={'https://rainbowsix.fandom.com/wiki/Rainbow_Six_Wiki'} className={welcome.ctaButton}>Learn More </a>
+                    <a href={'https://www.ubisoft.com/en-gb/game/rainbow-six/siege'} className={welcome.ctaButton}>Buy Now </a>
                 </div>
 
             </div>

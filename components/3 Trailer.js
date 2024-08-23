@@ -25,8 +25,8 @@ export default function Trailer(){
 
                 <div className={trailer.textOverlay}>
                     <SlideUp className={trailer.mainText}>Breach. Attack.</SlideUp >
-                    <SlideUp className={trailer.mainText}>Defend. Secure.</SlideUp >
-                    <SlideUp className={trailer.subText}>
+                    <SlideUp delay={0.5} className={trailer.mainText}>Defend. Secure.</SlideUp >
+                    <SlideUp delay={1} className={trailer.subText}>
                         Discover an elite, tactical shooter where
                         superior planning and flawless execution
                         reigns supreme

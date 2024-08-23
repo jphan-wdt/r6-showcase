@@ -74,8 +74,6 @@
 
 .overlayBtn::before{
     content: "+";
-    background: rgb(25, 25, 25);
-    border-radius: 50px;
 }
 
 

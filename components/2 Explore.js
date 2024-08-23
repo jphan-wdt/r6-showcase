@@ -5,7 +5,7 @@ import SlideUp from "./SlideUp";
 export default function Explore() {
     return(
         <SlideUp className={explore.cardContainer}>
-            <SlideUp>
+            <SlideUp delay={1}>
                 <i className={explore.text}>"There's no hiding. Not for you, not for me. Try not to disappoint me, soldier."</i>
             </SlideUp>
             <iframe
