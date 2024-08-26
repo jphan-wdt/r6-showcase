@@ -31,7 +31,7 @@
 }
 
 .scrollContainer::-webkit-scrollbar {
-    background-color: rgb(25, 25, 25);
+    background-color: var(--background-main);
     border-radius: 50px;
     height: 12px;
   }
@@ -92,7 +92,7 @@
 .subText{
     font-weight: 600;
     margin-top: 25px;
-    color: rgb(150, 150, 150);
+    color: var(--secondary-text);
 }
 
 

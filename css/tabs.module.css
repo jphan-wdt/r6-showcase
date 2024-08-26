@@ -18,7 +18,7 @@
     top: 0;
     right: 0;
 
-    background: rgb(25, 25, 25);
+    background: var(--background-main);
     border-radius: 30px;
 }
 
@@ -89,6 +89,6 @@
 
 .text{
     width: 50%;
-    color: rgb(150, 150, 150);
+    color: var(--secondary-text);
     font-weight: 600;
 }

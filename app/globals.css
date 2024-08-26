@@ -1,6 +1,9 @@
 * {
   padding: 0;
   margin: 0;
+
+  --background-main: rgb(25, 25, 25);
+  --secondary-text: rgb(150, 150, 150);
 }
 
 body::-webkit-scrollbar{
@@ -10,4 +13,5 @@ body::-webkit-scrollbar{
 .no-scroll {
   overflow: hidden;
 }
+
 

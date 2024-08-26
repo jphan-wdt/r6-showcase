@@ -100,7 +100,6 @@ export default function Gadgets() {
 
                 </SlideUp>
             
-
             </SlideUp>
         </SlideUp>
     );

@@ -50,7 +50,7 @@
 
 .content{
     margin: 25px 0;
-    color: rgb(150, 150, 150);
+    color: var(--secondary-text);
     font-weight: 500;
 }
 

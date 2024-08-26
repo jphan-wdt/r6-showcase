@@ -1,5 +1,4 @@
 import explore from "../css/explore.module.css"
-import section from "../css/section.module.css"
 import SlideUp from "./SlideUp";
 
 export default function Explore() {
@@ -16,7 +15,6 @@ export default function Explore() {
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
             />
-                
         </SlideUp>
     );
 }

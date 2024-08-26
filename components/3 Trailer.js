@@ -1,12 +1,10 @@
 'use client';
 
 import trailer from "../css/trailer.module.css"
-import section from "../css/section.module.css"
-import Image from "next/image";
 import shieldLineup from "../public/shield-lineup.jpg"
 import SlideUp from "./SlideUp";
-import { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Trailer(){
 

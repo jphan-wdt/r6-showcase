@@ -3,7 +3,6 @@ import scroll from "../css/travel.module.css"
 import Image from "next/image"
 
 import SlideUp from "./SlideUp"
-import FadeIn from "./FadeIn"
 
 import bank from "../public/maps-bank.webp"
 import border from "../public/maps-border.webp"

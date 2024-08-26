@@ -1,7 +1,6 @@
 .cardContainer{
     color: white;
     margin-bottom: 5%;
-    border:  2px red;
 
     display: flex;
     flex-direction: column;

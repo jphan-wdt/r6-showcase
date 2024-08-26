@@ -15,7 +15,6 @@ import mira from "../public/profile-mira.webp"
 import thatcher from "../public/profile-thatcher.webp"
 import twitch from "../public/profile-twitch.webp"
 
-
 export default function Team() {
 
     const tabData = {

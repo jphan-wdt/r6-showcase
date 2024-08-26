@@ -6,14 +6,11 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    
-
-    background-color: rgb(25, 25, 25)
+    background-color: var(--background-main)
 }
 
 .subHeader{
     padding: 50px 0 0 10%;
-
     font-size: 2.5rem;
     font-weight: 600;
     color: white;
@@ -22,25 +19,5 @@
     padding: 0px 0 0 10%;
 
     font-weight: 600;
-    color: rgb(150, 150, 150);
-}
-
-
-
-.scrollwatcher{
-    height: 10px;
-    position: fixed;
-    top: 0;
-    background-color: lime;
-    width: 100%;
-    transform-origin: left;
-    z-index: 100;
-
-    scale: 0 1;
-    animation: scrollwatch linear;
-    animation-timeline: scroll();
-}
-
-@keyframes scrollwatch {
-    to { scale: 1 1; }
+    color: var(--secondary-text);
 }

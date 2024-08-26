@@ -38,7 +38,6 @@ export default function Home() {
       <div id='gadgets' className={page.subHeader}>Master Gadgetry</div>
       <Gadgets/>
 
-
     </main>
   );
 }

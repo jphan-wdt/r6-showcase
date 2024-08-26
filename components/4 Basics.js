@@ -4,13 +4,10 @@ import { useState, useEffect } from "react"
 import section from "../css/section.module.css"
 import basics from "../css/basics.module.css"
 import tabs from "../css/tabs.module.css"
-import styles from "../css/videoPlayer.module.css"
-import Image from "next/image"
 
 import SlideUp from "./SlideUp"
 import FadeIn from "./FadeIn"
 
-import ash from "../public/maps-bank.webp"
 import { motion, AnimatePresence, easeInOut } from "framer-motion"
 
 export default function Basics() {
