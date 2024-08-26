@@ -9,11 +9,13 @@ import Team from "@/components/7 Team";
 import Gadgets from "@/components/8 Gadgets";
 
 import SlideUp from "@/components/SlideUp";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     
     <main className={page.mainContainer}>
+      <Navbar/>
       <Welcome/>
 
       <SlideUp className={page.subHeader}>Explore</SlideUp>
@@ -28,7 +30,7 @@ export default function Home() {
       <div id='travel' className={page.subHeader}>Travel the World</div>
       <Travel/>
 
-      <Destruction id='destruction'/>
+      <Destruction/>
 
       <div id='team' className={page.subHeader}>Meet Team Rainbow</div>
       <Team/>

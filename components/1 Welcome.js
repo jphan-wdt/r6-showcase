@@ -9,11 +9,8 @@ export default function Welcome() {
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
-            console.log(`Scrolling to section: ${sectionId}`);
           section.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            console.log(`NO FOUND to section: ${sectionId}`);
-        }
+        } 
       };
 
     return (   
