@@ -19,7 +19,7 @@ export default function Home() {
       <Welcome/>
 
       <SlideUp className={page.subHeader}>Explore</SlideUp>
-      <SlideUp className={page.caption}>What's new</SlideUp>
+      <SlideUp className={page.caption}>What&apos;s new</SlideUp>
       <Explore/>
 
       <Trailer/>

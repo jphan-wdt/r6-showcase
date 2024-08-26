@@ -160,9 +160,9 @@ export default function Basics() {
                                 <div className={tabs.closeTab} onClick={closeTab} />
                                 <div className={tabs.tabContentContainer}>
 
-                                    {activeTab.map((row) => (
+                                    {activeTab.map((row, index) => (
 
-                                        <FadeIn delay={0.2} className={tabs.tabRow}>
+                                        <FadeIn key={index} delay={0.2} className={tabs.tabRow}>
                                             <div className={tabs.subHeader}>{row.header}</div>
                                             <div className={tabs.text}>{row.text}</div>
                                         </FadeIn>

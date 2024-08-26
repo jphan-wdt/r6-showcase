@@ -31,7 +31,7 @@ const Navbar = () => {
         return () => {
           window.removeEventListener('scroll', scroll);
         };
-      }, [window.scrollY]);
+      }, [controls, lastScrollY]);
 
     const toggleTab = () => {
         setTabVisible(!tabVisible)

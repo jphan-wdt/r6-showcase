@@ -1,4 +1,4 @@
-import styles from "../css/VideoPlayer.module.css"
+import styles from "../css/videoPlayer.module.css"
 
 export default function VideoPlayer() {
     return (
