@@ -11,10 +11,13 @@ import Gadgets from "@/components/8 Gadgets";
 import SlideUp from "@/components/SlideUp";
 import Navbar from "@/components/Navbar";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 export default function Home() {
   return (
     
     <main className={page.mainContainer}>
+      <SpeedInsights/>
       <Navbar/>
       <Welcome/>
 
