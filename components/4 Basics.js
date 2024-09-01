@@ -117,7 +117,7 @@ export default function Basics() {
                 <SlideUp className={basics.flexContainer}>
 
                     <SlideUp className={basics.leftCol} onClick={() => openTab('tab1')}>
-                        <video className={basics.flexBackground} autoPlay muted loop>
+                        <video className={basics.flexBackground} autoPlay muted loop preload="metadata">
                             <source src={require('../public/0516-Prep.mp4')}/>
                             Your browser does not support the video tag.
                         </video>
@@ -129,7 +129,7 @@ export default function Basics() {
                     </SlideUp>
             
                     <div className={basics.rightCol}  onClick={() => openTab('tab2')}>
-                        <video className={basics.flexBackground} autoPlay muted loop>
+                        <video className={basics.flexBackground} autoPlay muted loop preload="metadata">
                             <source src={require('../public/0516-Intro3.mp4')}/>
                             Your browser does not support the video tag.
                         </video>
