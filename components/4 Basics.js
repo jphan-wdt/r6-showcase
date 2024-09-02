@@ -118,7 +118,7 @@ export default function Basics() {
 
                     <SlideUp className={basics.leftCol} onClick={() => openTab('tab1')}>
                         <video className={basics.flexBackground} autoPlay muted loop preload="metadata">
-                            <source src={require('../public/0516-Prep.mp4')}/>
+                            <source src={require('../public/0516-PrepComp.mp4')}/>
                             Your browser does not support the video tag.
                         </video>
                         <div className={basics.gradientOverlay} />
