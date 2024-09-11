@@ -6,7 +6,13 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    background-color: var(--background-main)
+    
+
+    z-index: -10;
+}
+
+.content{
+    z-index: 1;
 }
 
 .subHeader{
@@ -14,10 +20,19 @@
     font-size: 2.5rem;
     font-weight: 600;
     color: white;
+    background-color: var(--background-main);
 }
+
+.subHeader:nth-child(1){
+    border-radius: 50px 50px 0 0;
+}
+
 .caption{
     padding: 0px 0 0 10%;
 
     font-weight: 600;
+    
     color: var(--secondary-text);
+    background-color: var(--background-main);
 }
+

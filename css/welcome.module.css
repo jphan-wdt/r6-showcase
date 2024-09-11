@@ -1,9 +1,18 @@
+.heroContainer{
+    margin-bottom: -100vh;
+}
+
+.spacer{
+    height: 100vh;
+}
+
 .Hero{
     height: 85vh;
     width: 100%;
 
-    position: relative;
     overflow: hidden;
+    position: sticky;
+    top: 0;
 }
 
 .textOverlayContainer{

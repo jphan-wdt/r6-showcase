@@ -3,7 +3,7 @@ import SlideUp from "./SlideUp";
 
 export default function Explore() {
     return(
-        <SlideUp className={explore.cardContainer}>
+        <div className={explore.cardContainer}>
             <SlideUp delay={1}>
                 <i className={explore.text}>&quot;There&apos;s no hiding. Not for you, not for me. Try not to disappoint me, soldier.&quot;</i>
             </SlideUp>
@@ -15,6 +15,6 @@ export default function Explore() {
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
             />
-        </SlideUp>
+        </div>
     );
 }

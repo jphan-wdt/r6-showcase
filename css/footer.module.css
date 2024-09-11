@@ -1,0 +1,9 @@
+.container{
+    height: 25vh;
+    position: sticky;
+    bottom: 0;
+
+    background-color: rgb(75, 75, 75);
+
+    z-index: -1;
+}

@@ -7,6 +7,7 @@ import Travel from "@/components/5 Travel";
 import Destruction from "@/components/6 Destruction";
 import Team from "@/components/7 Team";
 import Gadgets from "@/components/8 Gadgets";
+import Footer from "@/components/9 Footer";
 
 import SlideUp from "@/components/SlideUp";
 import Navbar from "@/components/Navbar";
@@ -15,32 +16,38 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   return (
-    
+    <>
     <main className={page.mainContainer}>
       <SpeedInsights/>
       <Navbar/>
       <Welcome/>
 
-      <SlideUp className={page.subHeader}>Explore</SlideUp>
-      <SlideUp className={page.caption}>What&apos;s new</SlideUp>
-      <Explore/>
+      <div className={page.content}>
 
-      <Trailer/>
+        <div className={page.subHeader} id="first">Explore</div>
+        <div className={page.caption}>What&apos;s new</div>
+        <Explore/>
 
-      <div id='basics' className={page.subHeader}>Learn the Basics</div>
-      <Basics/>
+        <Trailer/>
 
-      <div id='travel' className={page.subHeader}>Travel the World</div>
-      <Travel/>
+        <div id='basics' className={page.subHeader}>Learn the Basics</div>
+        <Basics/>
 
-      <Destruction/>
+        <div id='travel' className={page.subHeader}>Travel the World</div>
+        <Travel/>
 
-      <div id='team' className={page.subHeader}>Meet Team Rainbow</div>
-      <Team/>
+        <Destruction/>
 
-      <div id='gadgets' className={page.subHeader}>Master Gadgetry</div>
-      <Gadgets/>
+        <div id='team' className={page.subHeader}>Meet Team Rainbow</div>
+        <Team/>
+
+        <div id='gadgets' className={page.subHeader}>Master Gadgetry</div>
+        <Gadgets/>
+
+      </div>
 
     </main>
+    <Footer/>
+    </>
   );
 }
