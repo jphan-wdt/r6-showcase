@@ -1,3 +1,8 @@
+.scrollArea{
+    height: 200vh;
+    position: relative;
+}
+
 .scrollContainer{
     display: flex;
     width: 100%;
@@ -8,19 +13,22 @@
     overflow-x: scroll;
     overflow-y: hidden;
 
-    position: relative;
-
     margin: 50px 0;
+
+    scroll-snap-type: x mandatory;
 }
 
 .scrollCard{
-    min-width: 75vw;
-    height: calc(75vw * 0.5625);
+    min-width: 70vw;
+    height: calc(70vw * 0.5625);
 
     overflow: hidden;
     position: relative;
 
     margin-bottom: 50px;
+
+    scroll-snap-align: center;
+    transition: all 0.4s;
 }
 
 .scrollCard:nth-child(1){
@@ -32,13 +40,11 @@
 
 .scrollContainer::-webkit-scrollbar {
     background-color: var(--background-main);
-    border-radius: 50px;
-    height: 12px;
+    height: 15px;
   }
   
   .scrollContainer::-webkit-scrollbar-thumb {
     background: rgb(75, 75, 75);
-    border-radius: 50px;
   }
 
 

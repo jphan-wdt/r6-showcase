@@ -6,13 +6,11 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    
+    background-color: var(--background-main);
 
-    z-index: -10;
-}
-
-.content{
     z-index: 1;
+    border-radius: 30px;
+    margin-bottom: 40vh;
 }
 
 .subHeader{
@@ -21,10 +19,7 @@
     font-weight: 600;
     color: white;
     background-color: var(--background-main);
-}
-
-.subHeader:nth-child(1){
-    border-radius: 50px 50px 0 0;
+    border-radius: 30px;
 }
 
 .caption{

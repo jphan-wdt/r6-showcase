@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { motion, useAnimation, AnimatePresence, easeInOut } from "framer-motion";
+import { motion, useAnimation, AnimatePresence, easeInOut, px } from "framer-motion";
 
 import navbar from "../css/navbar.module.css"
 import tabs from "../css/tabs.module.css"
@@ -17,7 +17,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const scroll = () => {
-          if (window.scrollY > lastScrollY && window.scrollY > 100) {
+          if (window.scrollY > lastScrollY) {
             controls.start({ y: -100 }); 
           } else {
             controls.start({ y: 0 }); 

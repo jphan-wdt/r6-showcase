@@ -17,36 +17,33 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export default function Home() {
   return (
     <>
+    <Welcome/>
+
     <main className={page.mainContainer}>
       <SpeedInsights/>
       <Navbar/>
-      <Welcome/>
 
-      <div className={page.content}>
+      <div className={page.subHeader} id="first">Explore</div>
+      <div className={page.caption}>What&apos;s new</div>
+      <Explore/>
 
-        <div className={page.subHeader} id="first">Explore</div>
-        <div className={page.caption}>What&apos;s new</div>
-        <Explore/>
+      <Trailer/>
 
-        <Trailer/>
+      <div id='basics' className={page.subHeader}>Learn the Basics</div>
+      <Basics/>
 
-        <div id='basics' className={page.subHeader}>Learn the Basics</div>
-        <Basics/>
+      <div id='travel' className={page.subHeader}>Travel the World</div>
+      <Travel/>
 
-        <div id='travel' className={page.subHeader}>Travel the World</div>
-        <Travel/>
+      <Destruction/>
 
-        <Destruction/>
+      <div id='team' className={page.subHeader}>Meet Team Rainbow</div>
+      <Team/>
 
-        <div id='team' className={page.subHeader}>Meet Team Rainbow</div>
-        <Team/>
-
-        <div id='gadgets' className={page.subHeader}>Master Gadgetry</div>
-        <Gadgets/>
-
-      </div>
-
+      <div id='gadgets' className={page.subHeader}>Master Gadgetry</div>
+      <Gadgets/>
     </main>
+
     <Footer/>
     </>
   );
