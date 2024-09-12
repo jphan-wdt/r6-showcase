@@ -12,6 +12,8 @@ import chalet from "../public/maps-chalet.webp"
 import coastline from "../public/maps-coastline.webp"
 import favela from "../public/maps-favela.webp"
 import FadeIn from "./FadeIn"
+import { useRef } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 export default function Travel() {
 
@@ -61,9 +63,17 @@ export default function Travel() {
         }
     ]
 
-    return(
+    const scrollRef = useRef(null);
+    
+    const { scrollYProgress } = useScroll({
+        target: scrollRef,
+    })
+    const x = useTransform(scrollYProgress, [0.1, 0.9], ["0%", "-315vw"])
 
-            <SlideUp className={section.sectionContainer}  >
+    return(
+        <div className={scroll.scrollArea} ref={scrollRef}>
+
+            <SlideUp className={scroll.sectionContainer}  >
         
                     <SlideUp className={section.caption}>
                         Attack and defend on the 25 maps in 20+ countries. From the
@@ -72,7 +82,7 @@ export default function Travel() {
                     </SlideUp>
 
 
-                    <div className={scroll.scrollContainer}>
+                    <motion.div className={scroll.scrollContainer} style={{ x }}>
 
                         {cardData.map((card, index) => (
 
@@ -90,9 +100,9 @@ export default function Travel() {
 
                         ))}
 
-                    </div>
+                    </motion.div>
                 
             </SlideUp>
-
+        </div>
     );
 }

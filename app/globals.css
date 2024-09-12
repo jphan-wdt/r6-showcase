@@ -6,8 +6,8 @@
   --secondary-text: rgb(150, 150, 150);
 }
 
-body::-webkit-scrollbar{
-  display: none;
+html{
+  overflow-x: hidden;
 }
 
 .no-scroll {
