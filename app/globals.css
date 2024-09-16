@@ -6,10 +6,6 @@
   --secondary-text: rgb(150, 150, 150);
 }
 
-html{
-  overflow-x: hidden;
-}
-
 .no-scroll {
   overflow: hidden;
 }

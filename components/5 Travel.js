@@ -68,7 +68,7 @@ export default function Travel() {
     const { scrollYProgress } = useScroll({
         target: scrollRef,
     })
-    const x = useTransform(scrollYProgress, [0.1, 0.9], ["0%", "-315vw"])
+    const x = useTransform(scrollYProgress, [0.05, 0.95], ["0%", "-315vw"])
 
     return(
         <div className={scroll.scrollArea} ref={scrollRef}>

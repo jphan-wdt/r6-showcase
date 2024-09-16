@@ -30,6 +30,8 @@
 .imageContainer{
     height: 400px;
     width: auto;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 100%);
 }
 
 .picture{
@@ -37,8 +39,6 @@
     height: 100%;
     object-fit: contain;
     scale: 1;
-
-    background: radial-gradient(circle, black, transparent 60%);
 
     transition: all 0.2s;
 }

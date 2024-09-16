@@ -6,6 +6,7 @@
 .sectionContainer{
     position: sticky;
     top: 0;
+    overflow: hidden;
 }
 
 .scrollContainer{
@@ -28,6 +29,8 @@
     position: relative;
 
     margin-bottom: 50px;
+
+    border-radius: 20px;
 }
 
 .scrollCard:nth-child(1){

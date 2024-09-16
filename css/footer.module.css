@@ -6,20 +6,45 @@
 
     background-color: rgb(75, 75, 75);
     z-index: -2;
+}
+
+.colContainer{
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     color: white;
-}
 
-.leftCol{
-    width: 40%;
-    margin-top: 100px;
+
 }
 
 .rightCol{
-    width: 40%;
+    width: 20%;
     margin-top: 100px;
     text-wrap: balance;
+}
+
+.leftCol{
+    width: 20%;
+    margin-top: 100px;
+    display: flex;
+}
+
+.logos{
+    height: 50px;
+    width: 50px;
+    fill: var(--background-main);
+    stroke-width: 1px;
+    stroke: var(--background-main);
+    transition: all 0.3s;
+}
+
+.logos:hover{
+    fill: var(--secondary-text);
+    stroke-width: 1px;
+    stroke: var(--secondary-text);
 }
