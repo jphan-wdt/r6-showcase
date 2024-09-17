@@ -10,15 +10,21 @@ import Image from "next/image";
 import SlideUp from "./SlideUp";
 import FadeIn from "./FadeIn";
 
-import ash from "../public/profile-ash.webp"
-import mira from "../public/profile-mira.webp"
-import thatcher from "../public/profile-thatcher.webp"
-import twitch from "../public/profile-twitch.webp"
+import ash from "../public/profile-ash2.webp"
+import mira from "../public/profile-mira2.webp"
+import thatcher from "../public/profile-thatcher2.webp"
+import twitch from "../public/profile-twitch2.webp"
+
+import ashTab from "../public/profile-ash-tab2.webp"
+import miraTab from "../public/profile-mira-tab.webp"
+import thatcherTab from "../public/profile-thatcher-tab.webp"
+import twitchTab from "../public/profile-twitch-tab.webp"
 
 export default function Team() {
 
     const tabData = {
         tab1: {
+            src: ashTab,
             header: 'Ash',
             text: `"When I was little, my savta taught me that 'Silence was a woman's best garment'. But, I have to admit, I never really took her advice to heart."`,
             name: 'Eliza Cohen' ,
@@ -30,6 +36,7 @@ export default function Team() {
             },
 
         tab2: {
+            src: miraTab,
             header: 'Mira',
             text: `"Think of me as your conscience. I see everything, and I'm just as ruthless."` ,
             name: 'Elena María Álvarez',
@@ -42,6 +49,7 @@ export default function Team() {
             },
 
         tab3: {
+            src: thatcherTab,
             header: 'Thatcher',
             text:
                 `"GPS satellites? Unmanned drones? Fookin' laser sights?
@@ -58,6 +66,7 @@ export default function Team() {
         },
 
         tab4: {
+            src: twitchTab,
             header: 'Twitch',
             text:
                 `"If you have a few spare hours, I'd love to share the details of how this device is a masterpiece of design.
@@ -172,6 +181,13 @@ export default function Team() {
                                             <i className={tabs.text}> {activeTab.text} </i>
                                         </FadeIn>
                                     </div>
+
+                                    <div className={tabs.tabImageContainer}>
+                                                <Image
+                                                    src={activeTab.src}
+                                                    className={tabs.tabImage}
+                                                />
+                                            </div>
 
                                     <FadeIn delay={0.2} className={tabs.tabRow}>
                                         <div className={tabs.subHeader}>Real Name</div>

@@ -6,6 +6,10 @@
   --secondary-text: rgb(150, 150, 150);
 }
 
+html{
+  background-color: var(--secondary-text);
+}
+
 .no-scroll {
   overflow: hidden;
 }

@@ -5,16 +5,20 @@ import section from "../css/section.module.css"
 import basics from "../css/basics.module.css"
 import tabs from "../css/tabs.module.css"
 
+import basics1 from "../public/basics-tab.webp"
+import basics2 from "../public/basics-tab2.webp"
+
 import SlideUp from "./SlideUp"
 import FadeIn from "./FadeIn"
 
 import { motion, AnimatePresence, easeInOut } from "framer-motion"
+import Image from "next/image"
 
 export default function Basics() {
 
     const tabData = {
         tab1: [
-            { header: 'Gameplay' },
+            { header: 'Gameplay', src: basics1 },
             { 
                 header: 'PVP',
                 text: `The game features three main PVP gamemodes: Bomb, Hostage, Secure Area. Each 
@@ -41,12 +45,6 @@ export default function Basics() {
                  location and prepare for the inevitable assault by the Attackers.` 
             },
             { 
-                header: 'Operators',
-                text: `Players may choose one Operator per round. Additionally, once an Operator is 
-                chosen, it will be locked out from being chosen by other players. Attackers have the 
-                option to change Operators during the Preparation Phase of a round.` 
-            },
-            { 
                 header: 'Deployment',
                 text: `Each map features multiple locations for both the Attackers and Defenders to choose 
                 from, greatly increasing the importance in conducting surveillance. Each map is designed to 
@@ -54,7 +52,7 @@ export default function Basics() {
             },
         ],
         tab2: [
-            { header: 'Features' },
+            { header: 'Features', src: basics2 },
             { 
                 header: 'Destruction',
                 text: `The destruction system allows players to break structures by planting explosives on 
@@ -66,6 +64,12 @@ export default function Basics() {
                 in which bullets deal less damage when they hit enemies through structures. This creates an 
                 ever-changing environment on the map, making it vital for players to be aware of their 
                 surroundings and work together.` 
+            },
+            { 
+                header: 'Operators',
+                text: `Players may choose one Operator per round. Additionally, once an Operator is 
+                chosen, it will be locked out from being chosen by other players. Attackers have the 
+                option to change Operators during the Preparation Phase of a round.` 
             },
             { 
                 header: 'Roles',
@@ -158,12 +162,19 @@ export default function Basics() {
                                 <div className={tabs.tabContentContainer}>
 
                                     {activeTab.map((row, index) => (
-
-                                        <FadeIn key={index} delay={0.2} className={tabs.tabRow}>
-                                            <div className={tabs.subHeader}>{row.header}</div>
-                                            <div className={tabs.text}>{row.text}</div>
-                                        </FadeIn>
-
+                                        <>
+                                            <FadeIn key={index} delay={0.2} className={tabs.tabRow}>
+                                                <div className={tabs.subHeader}>{row.header}</div>
+                                                <div className={tabs.text}>{row.text}</div>
+                                            </FadeIn>
+                                            <div className={tabs.tabImageContainer}>
+                                                <Image
+                                                    src={row.src}
+                                                    className={tabs.tabImage}
+                                                />
+                                            </div>
+                                            
+                                        </>
                                     ))}
 
                                 </div>

@@ -21,9 +21,9 @@
     overflow: hidden;
     position: relative;
 
-
     border: transparent 1px solid;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .flexBackground{
@@ -36,6 +36,7 @@
 }
 
 .flexCard:hover .flexBackground{
+    border-radius: 5px;
     scale: 1;
     transition: all 0.2s;
 }
@@ -45,6 +46,7 @@
     cursor: pointer;
     transition: all 0.2s;
 }
+
 
 .gradientOverlay{
     width: 100%;
