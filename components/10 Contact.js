@@ -22,8 +22,8 @@ export default function Contact() {
           <Image className={trailer.image} src={lineup} />
 
           <div className={trailer.textOverlay}>
-            <SlideUp className={trailer.mainText}>HIT HARD</SlideUp>
             <SlideUp className={trailer.mainText}>HIT FIRST</SlideUp>
+            <SlideUp className={trailer.mainText}>HIT HARD</SlideUp>
             <SlideUp className={trailer.subText}>
               Master every situation. Control every encounter.
             </SlideUp>

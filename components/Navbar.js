@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   motion,
-  useAnimation,
   AnimatePresence,
   easeInOut,
   useMotionValueEvent,
@@ -29,15 +28,12 @@ const Navbar = () => {
 
   const toggleTab = () => {
     setTabVisible(!tabVisible);
-  };
-
-  useEffect(() => {
     if (tabVisible) {
       document.documentElement.classList.add("no-scroll");
     } else {
       document.documentElement.classList.remove("no-scroll");
     }
-  }, [tabVisible]);
+  };
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -50,6 +46,8 @@ const Navbar = () => {
       setTabVisible(false);
     }
   };
+
+  const stopClickThrough = (e) => e.stopPropagation();
 
   return (
     <>
@@ -85,7 +83,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ ease: easeInOut, duration: 0.5 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={stopClickThrough}
             >
               <div className={tabs.closeTab} onClick={toggleTab} />
               <div className={tabs.tabContentContainer}>

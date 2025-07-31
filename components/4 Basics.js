@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import section from "../css/section.module.css";
 import basics from "../css/basics.module.css";
 import tabs from "../css/tabs.module.css";
@@ -92,19 +92,13 @@ export default function Basics() {
   const openTab = (tabIndex) => {
     setTabVisible(true);
     setActiveTab(tabData[tabIndex]);
+    document.documentElement.classList.add("no-scroll");
   };
 
   const closeTab = () => {
     setTabVisible(false);
+    document.documentElement.classList.remove("no-scroll");
   };
-
-  useEffect(() => {
-    if (tabVisible) {
-      document.documentElement.classList.add("no-scroll");
-    } else {
-      document.documentElement.classList.remove("no-scroll");
-    }
-  }, [tabVisible]);
 
   const [mousePosLeft, setMousePosLeft] = useState({ x: 0, y: 0 });
   const [mousePosRight, setMousePosRight] = useState({ x: 0, y: 0 });
@@ -120,6 +114,7 @@ export default function Basics() {
     setFn({ x, y });
   };
 
+  const stopClickThrough = (e) => e.stopPropagation();
   return (
     <>
       <SlideUp className={section.sectionContainer}>
@@ -140,7 +135,7 @@ export default function Basics() {
                 autoPlay
                 muted
                 loop
-                preload="metadata"
+                preload="auto"
                 style={{
                   transform: `translate(${mousePosLeft.x * -0.15}%, ${
                     mousePosLeft.y * -0.15
@@ -176,7 +171,7 @@ export default function Basics() {
                 autoPlay
                 muted
                 loop
-                preload="metadata"
+                preload="auto"
                 style={{
                   transform: `translate(${mousePosRight.x * -0.15}%, ${
                     mousePosRight.y * -0.15
@@ -212,7 +207,7 @@ export default function Basics() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ ease: easeInOut, duration: 0.5 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={stopClickThrough}
             >
               <div className={tabs.closeTab} onClick={closeTab} />
               <div className={tabs.tabContentContainer}>

@@ -42,7 +42,7 @@ export default function Home() {
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     console.log(latest);
-    if (latest < 0.03 || latest > 0.98) controls.start("hidden");
+    if (latest < 0.06 || latest > 0.98) controls.start("hidden");
     else controls.start("visible");
   });
   return (

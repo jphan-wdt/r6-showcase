@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import section from "../css/section.module.css";
 import team from "../css/team.module.css";
@@ -81,19 +81,14 @@ export default function Team() {
   const openTab = (tabIndex) => {
     setTabVisible(true);
     setActiveTab(tabData[tabIndex]);
+    document.documentElement.classList.add("no-scroll");
   };
 
   const closeTab = () => {
     setTabVisible(false);
+    document.documentElement.classList.remove("no-scroll");
   };
-
-  useEffect(() => {
-    if (tabVisible) {
-      document.documentElement.classList.add("no-scroll");
-    } else {
-      document.documentElement.classList.remove("no-scroll");
-    }
-  }, [tabVisible]);
+  const stopClickThrough = (e) => e.stopPropagation();
 
   const OperatorCard = ({ src, header, onClick }) => {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -166,7 +161,7 @@ export default function Team() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ ease: easeInOut, duration: 0.5 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={stopClickThrough}
             >
               <div className={tabs.closeTab} onClick={closeTab} />
               <div className={tabs.tabContentContainer}>
