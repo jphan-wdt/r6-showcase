@@ -1,26 +1,22 @@
-.sectionContainer{
-    height: auto;
-    width: 100%;
+.sectionContainer {
+  height: auto;
+  width: 100%;
 
-    color: white;
-    padding-bottom: 5%;
+  color: white;
+  padding-bottom: 5%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-    background-color: var(--background-main);
-    border-radius: 50px;
+  background-color: var(--background-main);
+  border-radius: 50px;
 }
 
-.caption{
-    padding: 40px 0 0 10%;
-    
-    color: var(--secondary-text);
+.caption {
+  padding: 40px 0 0 10%;
 
-    max-width: 520px;
-    font-weight: 500;
+  color: var(--secondary-text);
+  max-width: 520px;
+  font-weight: 500;
 }
-
-
-

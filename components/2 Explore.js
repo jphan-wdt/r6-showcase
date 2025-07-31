@@ -1,20 +1,23 @@
-import explore from "../css/explore.module.css"
+import explore from "../css/explore.module.css";
 import SlideUp from "./SlideUp";
 
 export default function Explore() {
-    return(
-        <div className={explore.cardContainer}>
-            <SlideUp delay={1}>
-                <i className={explore.text}>&quot;There&apos;s no hiding. Not for you, not for me. Try not to disappoint me, soldier.&quot;</i>
-            </SlideUp>
-            <iframe
-                src="https://www.youtube.com/embed/toO4W1bYtq0?si=bNjREaL7PTupkUuh"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-            />
-        </div>
-    );
+  return (
+    <div className={explore.cardContainer}>
+      <SlideUp delay={1}>
+        <i className={explore.text}>
+          &quot;There&apos;s no hiding. Not for you, not for me. Try not to
+          disappoint me, soldier.&quot;
+        </i>
+      </SlideUp>
+      <iframe
+        src="https://www.youtube.com/embed/toO4W1bYtq0?si=bNjREaL7PTupkUuh"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      />
+    </div>
+  );
 }

@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import React, { useEffect, useRef } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import React, { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const FadeIn = ({ children, className, delay }) => {
-  const controls = useAnimation()
-  const ref = useRef(null)
-  const inView = useInView(ref)
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref);
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [controls, inView]);
 
@@ -25,7 +25,7 @@ const FadeIn = ({ children, className, delay }) => {
       initial="hidden"
       animate={controls}
       variants={variants}
-      transition={{ duration: 1.2, ease: "easeIn", delay: delay}}
+      transition={{ duration: 1, ease: [0.65, 0, 0.35, 1], delay: delay }}
       className={className}
     >
       {children}
