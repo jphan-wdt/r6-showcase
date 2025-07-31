@@ -2,11 +2,11 @@
   padding: 0;
   margin: 0;
 
-  --background-main: rgb(25, 25, 25);
-  --secondary-text: rgb(150, 150, 150);
+  --background-main: #0f0f0f;
+  --secondary-text: #e0e0e0;
 }
 
-html{
+html {
   background-color: var(--secondary-text);
 }
 
@@ -14,4 +14,26 @@ html{
   overflow: hidden;
 }
 
+@media (min-width: 320px) {
+  html {
+    font-size: 8px;
+  }
+}
 
+@media (min-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1080px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}

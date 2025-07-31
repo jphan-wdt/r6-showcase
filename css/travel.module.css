@@ -1,114 +1,110 @@
-.scrollArea{
-    height: 400vh;
-    position: relative;
+.scrollArea {
+  height: 400vh;
+  position: relative;
 }
 
-.sectionContainer{
-    position: sticky;
-    top: 0;
-    overflow: hidden;
+.sectionContainer {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: var(--background-main);
 }
 
-.scrollContainer{
-    display: flex;
-    width: 100%;
-    height: auto;
+.scrollContainer {
+  display: flex;
+  width: 100%;
+  height: auto;
 
-    gap: 10%;
+  gap: 10%;
 
-    overflow-x: visible;
+  overflow-x: visible;
 
-    margin: 50px 0;
+  margin: 50px 0;
 }
 
-.scrollCard{
-    min-width: 70vw;
-    height: calc(70vw * 0.5625);
+.scrollCard {
+  min-width: 70vw;
+  height: calc(70vw * 0.5625);
 
-    overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
 
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
-.scrollCard:nth-child(1){
-    margin-left: 10%;
+.scrollCard:nth-child(1) {
+  margin-left: 10%;
 }
-.scrollCard:nth-last-child(1){
-    margin-right: 10%;
+.scrollCard:nth-last-child(1) {
+  margin-right: 10%;
 }
 
 .scrollContainer::-webkit-scrollbar {
-    background-color: var(--background-main);
-    height: 15px;
-  }
-  
-  .scrollContainer::-webkit-scrollbar-thumb {
-    background: rgb(75, 75, 75);
-  }
-
-
-.cardBackground{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
-    scale: 1.4;
-    transition: all 0.4s;
+  background-color: var(--background-main);
+  height: 15px;
 }
 
-.scrollCard:hover .cardBackground{
-    scale: 1;
+.scrollContainer::-webkit-scrollbar-thumb {
+  background: rgb(75, 75, 75);
 }
 
-.gradientOverlay{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to top, black, transparent);
+.cardBackground {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  scale: 1.2;
+  transition: all 0.3s;
 }
 
-.scrollCard:hover .gradientOverlay{
-    background: linear-gradient(to top, black, transparent 25%);
+.scrollCard:hover .cardBackground {
+  scale: 1.1;
+  transition: all 0.4s ease-out;
 }
 
-.textOverlay{
-    width: 40%;
-    height: auto;
-
-    position: absolute;
-    bottom: 10%;
-    right: 5%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    transition: all 0.3s;
+.gradientOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, black, transparent 40%);
+  transition: all 0.4s;
 }
 
-.scrollCard:hover .textOverlay{
-    transform: translateX(100%);
-    opacity: 0;
+.scrollCard:hover .gradientOverlay {
+  opacity: 0;
 }
 
-.mainText{
-    font-size: 2rem;
-    font-weight: 600;
-    color: white;
+.textOverlay {
+  width: 40%;
+  height: auto;
+
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: all 0.4s;
 }
 
-.subText{
-    font-weight: 600;
-    margin-top: 25px;
-    color: var(--secondary-text);
+.scrollCard:hover .textOverlay {
+  opacity: 0;
 }
 
+.mainText {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+}
 
-
-
-
+.subText {
+  font-weight: 600;
+  margin-top: 25px;
+  color: var(--secondary-text);
+}

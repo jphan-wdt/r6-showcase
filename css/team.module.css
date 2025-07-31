@@ -1,82 +1,89 @@
-.flexContainer{
-    display: flex;
-    width: 80%;
-    height: auto;
+.flexContainer {
+  display: flex;
+  width: 80%;
+  height: auto;
 
-    position: relative;
-    overflow: hidden;
+  flex-wrap: wrap;
 
-    margin: 50px auto;
+  position: relative;
+  overflow: hidden;
 
-    gap: 20px;
+  margin: 50px auto;
+
+  gap: 1rem;
 }
 
-.flexCard{
-    width: 24vw;
-    height: calc(24vw * 1.77);
+.flexCard {
+  flex: 1 0;
+  height: calc(24vw * 1.77);
+  width: auto;
 
-    max-width: calc(1080px / 3);
-    max-height: calc(1080px * 1.77 / 3);
+  min-width: calc(1080px / 4);
+  max-height: calc(1080px * 1.77 / 3);
 
-    overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
 
-    border: transparent 1px solid;
-    padding: 5px;
-    border-radius: 5px;
+  border: transparent 1px solid;
+  padding: 5px;
+  transition: all 0.2s;
 }
 
-.flexBackground{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    scale: 1.1;
-
-    transition: all 0.2s;
+.flexBackground {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  scale: 1.1;
+  transition: all 0.2s;
 }
 
-.flexCard:hover .flexBackground{
-    border-radius: 5px;
-    scale: 1;
-    transition: all 0.2s;
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.2;
+  transition: all 0.2s ease-out;
 }
 
-.flexCard:hover{
-    border: gold 1px solid;
-    cursor: pointer;
-    transition: all 0.2s;
+.flexCard:hover .flexBackground {
+  scale: 1;
+  transition: all 0.2s;
 }
 
-
-.gradientOverlay{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to top, black, transparent 50%)
+.flexCard:hover {
+  border: gold 1px solid;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-.textOverlay{
-    width: 100%;
-    height: auto;
-
-    position: absolute;
-    bottom: 5%;
-
-    display: flex;
-    justify-content: space-around;
-
-    z-index: 5;
-
-    font-size: 2rem;
-    font-weight: 600;
-    color: white;  
+.gradientOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, black, transparent 50%);
 }
 
-.overlayBtn::before{
-    content: "+";
+.textOverlay {
+  width: 100%;
+  height: auto;
+
+  position: absolute;
+  bottom: 5%;
+
+  display: flex;
+  justify-content: space-around;
+
+  z-index: 5;
+
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+
+  transition: all 0.2s ease-out;
 }
 
-
-
+.overlayBtn::before {
+  content: "+";
+}
