@@ -13,9 +13,10 @@ export default function Destruction() {
   });
   const colour = useTransform(
     scrollYProgress,
-    [0, 0.5],
+    [0.3, 0.6],
     ["#ffffff", "#600000"]
   );
+
   return (
     <div className={section.cardContainer} ref={scrollRef}>
       <div className={trailer.banner}>
@@ -24,7 +25,7 @@ export default function Destruction() {
             <span>ENDLESS</span>{" "}
             <motion.span style={{ color: colour }}>TENSION</motion.span>
           </SlideUp>
-          <SlideUp className={trailer.mainText} delay={0.2}>
+          <SlideUp className={trailer.mainText} delay={0.5}>
             <span>ENDLESS</span>{" "}
             <motion.span style={{ color: colour }}>ACTION</motion.span>
           </SlideUp>

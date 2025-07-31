@@ -11,10 +11,16 @@ export default function Trailer() {
     target: scrollRef,
     offset: ["start end", "end end"],
   });
-  const imageWidth = useTransform(scrollYProgress, [0, 0.6], ["70%", "100%"]);
+  const imageWidth = useTransform(scrollYProgress, [0, 0.6], ["60%", "100%"]);
   return (
     <div className={trailer.cardContainer} ref={scrollRef}>
-      <motion.div className={trailer.banner} style={{ width: imageWidth }}>
+      <motion.div
+        className={trailer.banner}
+        style={{
+          width: imageWidth,
+          transition: "all 0.3s ease-out",
+        }}
+      >
         <Image className={trailer.image} src={shieldLineup} />
 
         <div className={trailer.textOverlay}>

@@ -33,7 +33,7 @@ export default function Home() {
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     console.log(latest);
-    if (latest < 0.06 || latest > 0.98) controls.start("hidden");
+    if (latest < 0.03 || latest > 0.99) controls.start("hidden");
     else controls.start("visible");
   });
   return (
@@ -47,7 +47,7 @@ export default function Home() {
         initial="hidden"
         animate={controls}
         variants={variants}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
       >
         <div className={page.subHeader} id="first">
           Explore

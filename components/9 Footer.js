@@ -1,6 +1,15 @@
 import footer from "../css/footer.module.css";
 
 export default function Footer() {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    if (sectionId == "welcome") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
   return (
     <div className={footer.container}>
       <div className={footer.colContainer}>
@@ -27,6 +36,42 @@ export default function Footer() {
               </g>
             </svg>
           </a>
+        </div>
+
+        <div className={footer.rightCol}>
+          <div style={{ fontWeight: "bold" }}>Page Menu</div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+            <div
+              style={{ cursor: "pointer", width: "fit-content" }}
+              onClick={() => scrollToSection("welcome")}
+            >
+              Welcome
+            </div>
+            <div
+              style={{ cursor: "pointer", width: "fit-content" }}
+              onClick={() => scrollToSection("basics")}
+            >
+              Learn the Basics
+            </div>
+            <div
+              style={{ cursor: "pointer", width: "fit-content" }}
+              onClick={() => scrollToSection("travel")}
+            >
+              Travel the World
+            </div>
+            <div
+              style={{ cursor: "pointer", width: "fit-content" }}
+              onClick={() => scrollToSection("team")}
+            >
+              Meet Team Rainbow
+            </div>
+            <div
+              style={{ cursor: "pointer", width: "fit-content" }}
+              onClick={() => scrollToSection("gadgets")}
+            >
+              Master Gadgetry
+            </div>
+          </div>
         </div>
 
         <div className={footer.rightCol}>

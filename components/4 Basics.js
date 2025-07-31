@@ -206,7 +206,7 @@ export default function Basics() {
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ ease: easeInOut, duration: 0.5 }}
+              transition={{ duration: 1, ease: [0.75, 0, 0.25, 1] }}
               onClick={stopClickThrough}
             >
               <div className={tabs.closeTab} onClick={closeTab} />

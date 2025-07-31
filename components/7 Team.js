@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence, easeInOut } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import section from "../css/section.module.css";
 import team from "../css/team.module.css";
 import tabs from "../css/tabs.module.css";
@@ -160,7 +160,7 @@ export default function Team() {
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ ease: easeInOut, duration: 0.5 }}
+              transition={{ duration: 1, ease: [0.75, 0, 0.25, 1] }}
               onClick={stopClickThrough}
             >
               <div className={tabs.closeTab} onClick={closeTab} />

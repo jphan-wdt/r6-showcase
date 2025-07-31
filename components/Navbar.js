@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   motion,
   AnimatePresence,
-  easeInOut,
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
@@ -28,7 +27,7 @@ const Navbar = () => {
 
   const toggleTab = () => {
     setTabVisible(!tabVisible);
-    if (tabVisible) {
+    if (!tabVisible) {
       document.documentElement.classList.add("no-scroll");
     } else {
       document.documentElement.classList.remove("no-scroll");
@@ -40,10 +39,12 @@ const Navbar = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
       setTabVisible(false);
+      document.documentElement.classList.remove("no-scroll");
     }
     if (sectionId == "welcome") {
       window.scrollTo({ top: 0, behavior: "smooth" });
       setTabVisible(false);
+      document.documentElement.classList.remove("no-scroll");
     }
   };
 
@@ -57,7 +58,7 @@ const Navbar = () => {
             initial={{ y: "-100%" }}
             animate={{ y: "0%" }}
             exit={{ y: "-100%" }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: [0.75, 0, 0.25, 1] }}
             className={navbar.navbarContainer}
           >
             <div
@@ -82,7 +83,7 @@ const Navbar = () => {
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ ease: easeInOut, duration: 0.5 }}
+              transition={{ duration: 1, ease: [0.75, 0, 0.25, 1] }}
               onClick={stopClickThrough}
             >
               <div className={tabs.closeTab} onClick={toggleTab} />

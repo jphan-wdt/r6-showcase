@@ -12,47 +12,27 @@
 
 .scrollContainer {
   display: flex;
-  width: 100%;
-  height: auto;
+  width: fit-content;
 
-  gap: 10%;
+  gap: 1rem;
 
-  overflow-x: visible;
-
-  margin: 50px 0;
+  margin: 50px 10%;
 }
 
 .scrollCard {
-  min-width: 70vw;
-  height: calc(70vw * 0.5625);
+  flex: 0 0 80vw;
+  height: 80vh;
 
   overflow: hidden;
   position: relative;
 
-  margin-bottom: 50px;
-
   border-radius: 20px;
-}
-
-.scrollCard:nth-child(1) {
-  margin-left: 10%;
-}
-.scrollCard:nth-last-child(1) {
-  margin-right: 10%;
-}
-
-.scrollContainer::-webkit-scrollbar {
-  background-color: var(--background-main);
-  height: 15px;
-}
-
-.scrollContainer::-webkit-scrollbar-thumb {
-  background: rgb(75, 75, 75);
 }
 
 .cardBackground {
   height: 100%;
   width: 100%;
+  position: absolute;
   object-fit: cover;
 
   scale: 1.2;

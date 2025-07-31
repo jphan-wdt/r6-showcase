@@ -11,7 +11,12 @@ import coastline from "../public/maps-coastline.webp";
 import favela from "../public/maps-favela.webp";
 import FadeIn from "./FadeIn";
 import { useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 export default function Travel() {
   const cardData = [
@@ -65,7 +70,11 @@ export default function Travel() {
   const { scrollYProgress } = useScroll({
     target: scrollRef,
   });
-  const x = useTransform(scrollYProgress, [0.05, 0.95], ["0%", "-315vw"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log(latest);
+  });
 
   const Card = ({ card }) => {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -88,7 +97,7 @@ export default function Travel() {
           src={card.source}
           style={{
             transform: `translate(${mousePos.x * -0.09}%, ${
-              mousePos.y * -0.09
+              mousePos.y * -0.1
             }%)`,
           }}
         />

@@ -18,7 +18,10 @@ export default function Contact() {
   return (
     <div className={section.sectionContainer}>
       <div className={trailer.cardContainer} ref={scrollRef}>
-        <motion.div className={trailer.banner} style={{ width: imageWidth }}>
+        <motion.div
+          className={trailer.banner}
+          style={{ width: imageWidth, transition: "all 0.3s ease-out" }}
+        >
           <Image className={trailer.image} src={lineup} />
 
           <div className={trailer.textOverlay}>
