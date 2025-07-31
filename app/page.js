@@ -12,26 +12,17 @@ import Gadgets from "@/components/8 Gadgets";
 import Footer from "@/components/9 Footer";
 import Contact from "@/components/10 Contact";
 
-import SlideUp from "@/components/SlideUp";
 import Navbar from "@/components/Navbar";
 
-import Lenis from "lenis";
-import "lenis/dist/lenis.css";
-
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { useRef } from "react";
 import {
   motion,
   useAnimation,
   useMotionValueEvent,
   useScroll,
-  easeOut,
 } from "framer-motion";
 
 export default function Home() {
-  // const lenis = new Lenis({
-  //   autoRaf: true,
-  // });
   const { scrollYProgress } = useScroll();
 
   const controls = useAnimation();
